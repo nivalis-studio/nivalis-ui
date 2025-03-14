@@ -1,39 +1,58 @@
 {
-  "name": "registry-template",
+  "name": "@nivalis/ui",
+  "type": "module",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "22.x",
+    "pnpm": "9.x"
+  },
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build",
-    "start": "next start",
+    "dev": "NODE_NO_WARNINGS=1 next dev --turbopack",
+    "build": "NODE_NO_WARNINGS=1 next build",
+    "start": "NODE_NO_WARNINGS=1 next start",
     "lint": "next lint",
-    "registry:build": "shadcn build"
+    "lint:fix": "next lint --fix",
+    "prepare": "pnpm dlx lefthook install",
+    "registry:build": "shadcn build",
+    "ts": "tsc"
   },
   "dependencies": {
-    "@radix-ui/react-label": "^2.1.1",
-    "@radix-ui/react-slot": "^1.1.1",
-    "@tanstack/react-query": "^5.64.1",
-    "class-variance-authority": "^0.7.1",
-    "clsx": "^2.1.1",
-    "lucide-react": "^0.471.1",
-    "next": "15.1.4",
-    "next-themes": "^0.4.4",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "shadcn": "2.4.0-canary.12",
-    "tailwind-merge": "^2.6.0",
-    "tailwindcss-animate": "^1.0.7",
-    "zod": "^3.24.1"
+    "@radix-ui/react-label": "2.1.2",
+    "@radix-ui/react-slot": "1.1.2",
+    "@tanstack/react-query": "5.68.0",
+    "class-variance-authority": "0.7.1",
+    "clsx": "2.1.1",
+    "lucide-react": "0.479.0",
+    "next": "15.2.2",
+    "next-themes": "0.4.6",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "shadcn": "2.4.0-canary.14",
+    "tailwind-merge": "3.0.2",
+    "tailwindcss-animate": "1.0.7",
+    "zod": "3.24.2"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "15.1.4",
-    "postcss": "^8",
-    "tailwindcss": "^3.4.1",
-    "typescript": "^5"
-  }
+    "@commitlint/cli": "19.8.0",
+    "@commitlint/config-conventional": "19.8.0",
+    "@nivalis/eslint-config": "5.1.0",
+    "@nivalis/prettier-config": "3.5.3",
+    "@tailwindcss/postcss": "4.0.14",
+    "@types/node": "22.13.10",
+    "@types/react": "19.0.10",
+    "@types/react-dom": "19.0.4",
+    "eslint": "9.22.0",
+    "lefthook": "1.11.3",
+    "lint-staged": "15.5.0",
+    "prettier": "3.5.3",
+    "postcss": "8.5.3",
+    "prettier-plugin-tailwindcss": "0.6.11",
+    "tailwindcss": "4.0.14",
+    "typescript": "5.7.3"
+  },
+  "lint-staged": {
+    "*": "eslint --quiet --fix"
+  },
+  "packageManager": "pnpm@9.15.4+sha512.b2dc20e2fc72b3e18848459b37359a32064663e5627a51e4c74b2c29dd8e8e0491483c3abb40789cfd578bf362fb6ba8261b05f0387d76792ed6e23ea3b1b6a0"
 }
