@@ -1,25 +1,14 @@
 {
   "$schema": "https://turbo.build/schema.json",
-  "globalDependencies": ["**/.env"],
-  "ui": "stream",
   "tasks": {
     "build": {
-      "inputs": ["$TURBO_DEFAULT$", ".env"],
+      "inputs": ["$TURBO_DEFAULT$", ".env*"],
       "dependsOn": ["^build"],
-      "outputs": [".next/**", "!.next/cache/**", "next-env.d.ts"]
-    },
-    "start": {
-      "cache": false
-    },
-    "dev": {
-      "inputs": ["$TURBO_DEFAULT$", ".env"],
-      "cache": false,
-      "persistent": true
-    },
-    "lint": {},
-    "lint:fix": {},
-    "ts": {
-      "outputs": ["node_modules/.cache/tsbuildinfo.json"]
+      "env": [
+        "NEXT_PUBLIC_VERCEL_URL",
+        "NODE_ENV"
+      ],
+      "outputs": ["dist/**", ".next/**", "!.next/cache/**"]
     }
   }
 }
