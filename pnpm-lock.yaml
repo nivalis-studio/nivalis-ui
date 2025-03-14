@@ -66,6 +66,9 @@ importers:
       '@tailwindcss/postcss':
         specifier: 4.0.14
         version: 4.0.14
+      '@total-typescript/ts-reset':
+        specifier: 0.6.1
+        version: 0.6.1
       '@types/node':
         specifier: 22.13.10
         version: 22.13.10
@@ -761,6 +764,9 @@ packages:
     resolution: {integrity: sha512-mMOdGDKlwTP/WV72QqSNf4PAMeoBp/DqBHQ222wBfb51Looi8QUqnCnb9O98ZgvNISmy6fzxRGBJdZ+9IBvX2Q==}
     peerDependencies:
       react: ^18 || ^19
+
+  '@total-typescript/ts-reset@0.6.1':
+    resolution: {integrity: sha512-cka47fVSo6lfQDIATYqb/vO1nvFfbPw7uWLayIXIhGETj0wcOOlrlkobOMDNQOFr9QOafegUPq13V2+6vtD7yg==}
 
   '@ts-morph/common@0.19.0':
     resolution: {integrity: sha512-Unz/WHmd4pGax91rdIKWi51wnVUW11QttMEPpBiBgIewnc9UQIX7UDLxr5vRlqeByXCwhkF6VabSsI0raWcyAQ==}
@@ -3930,6 +3936,8 @@ snapshots:
     dependencies:
       '@tanstack/query-core': 5.68.0
       react: 19.0.0
+
+  '@total-typescript/ts-reset@0.6.1': {}
 
   '@ts-morph/common@0.19.0':
     dependencies:
