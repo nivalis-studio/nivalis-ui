@@ -5,14 +5,14 @@
   "items": [
     {
       "name": "button",
-      "type": "registry:component",
-      "title": "Hello World",
-      "description": "A simple hello world component",
-      "registryDependencies": [],
+      "type": "registry:ui",
+      "dependencies": [
+        "@radix-ui/react-slot"
+      ],
       "files": [
         {
-          "path": "src/registry/base/button/index.tsx",
-          "type": "registry:component"
+          "path": "src/registry/base/ui/button.tsx",
+          "type": "registry:ui"
         }
       ]
     }
