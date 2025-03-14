@@ -1,5 +1,5 @@
-import '@/styles/globals.css';
-import type { PropsWithChildren } from 'react';
+import "@/styles/globals.css";
+import type { PropsWithChildren } from "react";
 
 const Layout = async ({ children }: PropsWithChildren) => {
   return await children;

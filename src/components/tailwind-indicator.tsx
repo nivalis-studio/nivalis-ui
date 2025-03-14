@@ -1,7 +1,7 @@
 export const TailwindIndicator = () => {
   if (
-    process.env.NODE_ENV === 'production' ||
-    process.env.HIDE_TAILWIND_INDICATOR === '1'
+    process.env.NODE_ENV === "production" ||
+    process.env.HIDE_TAILWIND_INDICATOR === "1"
   )
     return null;
 

@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import { useEffect, useState, useTransition } from 'react';
-import { useTheme } from 'next-themes';
-import { Moon, Sun } from 'lucide-react';
-import { Button } from '@/registry/base/button';
+import { useEffect, useState, useTransition } from "react";
+import { useTheme } from "next-themes";
+import { Moon, Sun } from "lucide-react";
+import { Button } from "@/registry/base/button";
 
 export const ModeToggle = () => {
   const [mounted, setMounted] = useState(false);
@@ -23,7 +23,7 @@ export const ModeToggle = () => {
       className='size-7 p-1.5'
       onClick={() => {
         startTransition(() => {
-          setTheme(resolvedTheme === 'dark' ? 'light' : 'dark');
+          setTheme(resolvedTheme === "dark" ? "light" : "dark");
         });
       }}
     >

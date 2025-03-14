@@ -1,10 +1,10 @@
-import type { Config } from 'tailwindcss';
+import type { Config } from "tailwindcss";
 
 const config: Config = {
   theme: {
     extend: {
       transitionProperty: {
-        fg: 'color, background-color, border-color, box-shadow, opacity',
+        fg: "color, background-color, border-color, box-shadow, opacity",
       },
     },
   },

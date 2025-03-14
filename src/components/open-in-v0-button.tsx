@@ -1,5 +1,5 @@
-import { cn } from '@/lib/classnames';
-import { Button } from '@/registry/base/button';
+import { cn } from "@/lib/classnames";
+import { Button } from "@/registry/base/button";
 
 export const OpenInV0Button = ({
   name,
@@ -14,12 +14,12 @@ export const OpenInV0Button = ({
       asChild
       aria-label='Open in v0'
       className={cn(
-        'h-7 cursor-pointer gap-1 rounded-lg bg-black px-3 text-xs text-white shadow-none hover:bg-black hover:text-white dark:bg-white dark:text-black',
+        "h-7 cursor-pointer gap-1 rounded-lg bg-black px-3 text-xs text-white shadow-none hover:bg-black hover:text-white dark:bg-white dark:text-black",
         className,
       )}
     >
       <a href={url} target='_blank' rel='noreferrer'>
-        Open in{' '}
+        Open in{" "}
         <svg
           viewBox='0 0 40 20'
           fill='none'
