@@ -1,6 +1,6 @@
 import { OpenInV0Button } from '@/components/open-in-v0-button';
 import { ModeToggle } from '@/components/mode-toggle';
-import { Button } from '@/registry/new-york/button';
+import { Button } from '@/registry/base/button';
 
 const Page = () => {
   return (

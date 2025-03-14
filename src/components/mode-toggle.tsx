@@ -3,7 +3,7 @@
 import { useEffect, useState, useTransition } from 'react';
 import { useTheme } from 'next-themes';
 import { Moon, Sun } from 'lucide-react';
-import { Button } from '@/registry/new-york/button';
+import { Button } from '@/registry/base/button';
 
 export const ModeToggle = () => {
   const [mounted, setMounted] = useState(false);

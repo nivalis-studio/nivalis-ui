@@ -1,5 +1,5 @@
 import { cn } from '@/lib/classnames';
-import { Button } from '@/registry/new-york/button';
+import { Button } from '@/registry/base/button';
 
 export const OpenInV0Button = ({
   name,
