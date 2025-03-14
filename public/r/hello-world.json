@@ -9,8 +9,8 @@
   ],
   "files": [
     {
-      "path": "registry/new-york/hello-world/hello-world.tsx",
-      "content": "export function HelloWorld() {\n  return <h1 className=\"text-2xl font-bold\">Hello World</h1>\n}\n",
+      "path": "src/registry/new-york/hello-world/hello-world.tsx",
+      "content": "export const HelloWorld = () => {\n  return <h1 className='text-2xl font-bold'>Hello World</h1>;\n};\n",
       "type": "registry:component"
     }
   ]
