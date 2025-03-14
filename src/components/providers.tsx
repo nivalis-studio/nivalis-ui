@@ -10,9 +10,9 @@ export const Providers = ({
   return (
     <ThemeProvider
       disableTransitionOnChange
-      enableSystem
+      enableSystem={false}
       attribute='class'
-      defaultTheme='system'
+      defaultTheme='dark'
     >
       {children}
     </ThemeProvider>

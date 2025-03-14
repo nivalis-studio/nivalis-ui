@@ -1,5 +1,5 @@
-import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/classnames';
+import { Button } from '@/registry/new-york/button';
 
 export const OpenInV0Button = ({
   name,
@@ -7,14 +7,14 @@ export const OpenInV0Button = ({
 }: { readonly name: string } & React.ComponentProps<typeof Button>) => {
   const url = process.env.NEXT_PUBLIC_BASE_URL
     ? `https://v0.dev/chat/api/open?url=${process.env.NEXT_PUBLIC_BASE_URL}/r/${name}.json`
-    : '';
+    : undefined;
 
   return (
     <Button
       asChild
       aria-label='Open in v0'
       className={cn(
-        'h-7 gap-1 rounded-lg bg-black px-3 text-xs text-white shadow-none hover:bg-black hover:text-white dark:bg-white dark:text-black',
+        'h-7 cursor-pointer gap-1 rounded-lg bg-black px-3 text-xs text-white shadow-none hover:bg-black hover:text-white dark:bg-white dark:text-black',
         className,
       )}
     >
