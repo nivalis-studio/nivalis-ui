@@ -1,6 +1,7 @@
 import { OpenInV0Button } from "@/components/open-in-v0-button";
 import { ModeToggle } from "@/components/mode-toggle";
 import { Button } from "@/registry/base/ui/button";
+import { CopyButton } from "@/components/copy-button";
 
 const Page = () => {
   return (
@@ -16,7 +17,10 @@ const Page = () => {
         <div className='relative flex min-h-[450px] flex-col gap-4 rounded-lg border p-4'>
           <div className='flex items-center justify-between'>
             <h2 className='text-sm sm:pl-3'>A basic button</h2>
-            <OpenInV0Button name='button' className='w-fit' />
+            <div className='flex gap-2'>
+              <OpenInV0Button name='button' className='w-fit' />
+              <CopyButton value='pnpm dlx @nivalis/ui add button' />
+            </div>
           </div>
           <div className='relative flex min-h-[400px] items-center justify-center'>
             <Button>Click me</Button>

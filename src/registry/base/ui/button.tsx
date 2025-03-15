@@ -1,7 +1,7 @@
 "use client";
 
 import { cva } from "class-variance-authority";
-import { Slot } from "radix-ui";
+import { Slot } from "@radix-ui/react-slot";
 import { Spinner } from "@medusajs/icons";
 import { cn } from "@/lib/classnames";
 import type { VariantProps } from "class-variance-authority";
@@ -43,10 +43,11 @@ const buttonVariants = cva(
         ),
       },
       size: {
-        small: "txt-compact-small-plus gap-x-1.5 px-2 py-1",
+        sm: "txt-compact-small-plus gap-x-1.5 px-2 py-1",
         base: "txt-compact-small-plus gap-x-1.5 px-3 py-1.5",
-        large: "txt-compact-medium-plus gap-x-1.5 px-4 py-2.5",
-        xlarge: "txt-compact-large-plus gap-x-1.5 px-5 py-3.5",
+        lg: "txt-compact-medium-plus gap-x-1.5 px-4 py-2.5",
+        xl: "txt-compact-large-plus gap-x-1.5 px-5 py-3.5",
+        icon: "size-8 p-1.5",
       },
     },
     defaultVariants: {
@@ -89,7 +90,7 @@ const Button = ({
   disabled,
   ...props
 }: ButtonProps) => {
-  const Component = asChild ? Slot.Root : "button";
+  const Component = asChild ? Slot : "button";
 
   /*
    * In the case of a button where asChild is true, and isLoading is true, we ensure that
@@ -119,14 +120,13 @@ const Button = ({
   return (
     <Component
       {...props}
-      className={cn(buttonVariants({ variant, size }), className)}
+      data-slot='button'
+      className={cn(buttonVariants({ variant, size, className }))}
       disabled={disabled ?? isLoading}
     >
       {renderInner()}
     </Component>
   );
 };
-
-Button.displayName = "Button";
 
 export { Button, buttonVariants };

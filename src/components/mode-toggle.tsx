@@ -20,7 +20,7 @@ export const ModeToggle = () => {
 
   return (
     <Button
-      className='size-7 p-1.5'
+      size='icon'
       onClick={() => {
         startTransition(() => {
           setTheme(resolvedTheme === "dark" ? "light" : "dark");
