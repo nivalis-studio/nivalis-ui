@@ -3,7 +3,7 @@
 import { useEffect, useState, useTransition } from "react";
 import { useTheme } from "next-themes";
 import { Moon, Sun } from "lucide-react";
-import { Button } from "@/registry/base/ui/button";
+import { Button } from "@/registry/base/components/button";
 
 export const ModeToggle = () => {
   const [mounted, setMounted] = useState(false);
@@ -20,7 +20,7 @@ export const ModeToggle = () => {
 
   return (
     <Button
-      size='icon'
+      size='small'
       onClick={() => {
         startTransition(() => {
           setTheme(resolvedTheme === "dark" ? "light" : "dark");

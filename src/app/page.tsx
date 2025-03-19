@@ -1,7 +1,7 @@
 import { OpenInV0Button } from "@/components/open-in-v0-button";
 import { ModeToggle } from "@/components/mode-toggle";
-import { Button } from "@/registry/base/ui/button";
 import { CopyButton } from "@/components/copy-button";
+import { Button } from "@/registry/base/components/button";
 
 const Page = () => {
   return (
