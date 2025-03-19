@@ -2,8 +2,8 @@
 
 import { useEffect, useState } from "react";
 import { CheckIcon, ClipboardIcon } from "lucide-react";
-import { Button } from "@/registry/base/ui/button";
 import { cn } from "@/lib/classnames";
+import { Button } from "@/registry/base/components/button";
 
 export const copyToClipboard = async (value: string) => {
   await navigator.clipboard.writeText(value);
@@ -30,7 +30,7 @@ export const CopyButton = ({ value }: Props) => {
 
   return (
     <Button
-      size='icon'
+      size='small'
       className='size-7'
       onClick={async () => {
         await copyToClipboard(value);

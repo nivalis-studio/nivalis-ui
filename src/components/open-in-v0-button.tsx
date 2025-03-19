@@ -1,5 +1,5 @@
 import { cn } from "@/lib/classnames";
-import { Button } from "@/registry/base/ui/button";
+import { Button } from "@/registry/base/components/button";
 
 export const OpenInV0Button = ({
   name,
