@@ -83,6 +83,15 @@ importers:
       '@radix-ui/react-tooltip':
         specifier: 1.1.8
         version: 1.1.8(@types/react-dom@19.0.4(@types/react@19.0.10))(@types/react@19.0.10)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@storybook/addon-links':
+        specifier: 8.6.7
+        version: 8.6.7(react@19.0.0)(storybook@8.6.6(prettier@3.5.3))
+      '@storybook/addon-styling-webpack':
+        specifier: 1.0.1
+        version: 1.0.1(storybook@8.6.6(prettier@3.5.3))(webpack@5.98.0(esbuild@0.25.1))
+      '@storybook/addon-themes':
+        specifier: 8.6.7
+        version: 8.6.7(storybook@8.6.6(prettier@3.5.3))
       '@tanstack/react-query':
         specifier: 5.68.0
         version: 5.68.0(react@19.0.0)
@@ -2742,6 +2751,15 @@ packages:
     peerDependencies:
       storybook: ^8.6.6
 
+  '@storybook/addon-links@8.6.7':
+    resolution: {integrity: sha512-fIiXlaOa9Bv2tbBshQbh/BjzGOilXVx+6nrX9VkLOg7UvzAvivtSraRmPWjgdtsChAHC8Xac42KUCNGQ/rkf5w==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0-beta
+      storybook: ^8.6.7
+    peerDependenciesMeta:
+      react:
+        optional: true
+
   '@storybook/addon-measure@8.6.6':
     resolution: {integrity: sha512-zqpDVXVtWK9GS3xjXzCptcAcr2mgbop1bMZjkUlSgkYpRCMvr5a6SuSngDnOdvjvLRpZZHUvSA165rdjpfnC3g==}
     peerDependencies:
@@ -2756,6 +2774,16 @@ packages:
     resolution: {integrity: sha512-4UCN/audKI8v3UP64uqnXseNVG0tvW/+33KCMffB8bi/MwFfFbmUqwNLRfS1S0yk2tELC9POXaLB/iQZNmV2iQ==}
     peerDependencies:
       storybook: ^8.6.6
+
+  '@storybook/addon-styling-webpack@1.0.1':
+    resolution: {integrity: sha512-5n+SXPfMTc4m7sWaJWPWjoHYWc6/B111M2Ia55toQ3GV4ON4vVlTgH9FX+EgCkDticElj99HLTMDJkHRj2yvkg==}
+    peerDependencies:
+      webpack: ^5.0.0
+
+  '@storybook/addon-themes@8.6.7':
+    resolution: {integrity: sha512-8yKmeg4kdK6Jr0c5EsnlR0QJCzg/oQVe5FxC9BeRBqVWujkA17kr11f5jRwlprt+nfn/V0JPIa75kNV9bCFmeg==}
+    peerDependencies:
+      storybook: ^8.6.7
 
   '@storybook/addon-toolbars@8.6.6':
     resolution: {integrity: sha512-xdmCIJQXY8V8bmVcK0VcKx79doHe3LEZ/PUKaH3cnd8IZ/Lltp3hySDH0oLK1JrSGEouVcIDCboSOhJZZ/Qbsg==}
@@ -2846,6 +2874,11 @@ packages:
         optional: true
       webpack:
         optional: true
+
+  '@storybook/node-logger@8.6.7':
+    resolution: {integrity: sha512-TuiHy91ug/1Scg7P3nekIj9pupGHhKJEyG4m8JK5qehAQ00G3mftqyvrojcciOthGNRARDVxpMSOHJoO5uLTPQ==}
+    peerDependencies:
+      storybook: ^8.2.0 || ^8.3.0-0 || ^8.4.0-0 || ^8.5.0-0 || ^8.6.0-0
 
   '@storybook/preset-react-webpack@8.6.6':
     resolution: {integrity: sha512-Uau7F3HlgQbIdeGeT7FwLVwwiddcpBaMOMkgVe7lwy7wIv2Fe6Tp3uv+Jm0JhQeELxpUGsaZLisvBOC7AX97fA==}
@@ -9902,6 +9935,14 @@ snapshots:
       storybook: 8.6.6(prettier@3.5.3)
       ts-dedent: 2.2.0
 
+  '@storybook/addon-links@8.6.7(react@19.0.0)(storybook@8.6.6(prettier@3.5.3))':
+    dependencies:
+      '@storybook/global': 5.0.0
+      storybook: 8.6.6(prettier@3.5.3)
+      ts-dedent: 2.2.0
+    optionalDependencies:
+      react: 19.0.0
+
   '@storybook/addon-measure@8.6.6(storybook@8.6.6(prettier@3.5.3))':
     dependencies:
       '@storybook/global': 5.0.0
@@ -9915,6 +9956,18 @@ snapshots:
   '@storybook/addon-outline@8.6.6(storybook@8.6.6(prettier@3.5.3))':
     dependencies:
       '@storybook/global': 5.0.0
+      storybook: 8.6.6(prettier@3.5.3)
+      ts-dedent: 2.2.0
+
+  '@storybook/addon-styling-webpack@1.0.1(storybook@8.6.6(prettier@3.5.3))(webpack@5.98.0(esbuild@0.25.1))':
+    dependencies:
+      '@storybook/node-logger': 8.6.7(storybook@8.6.6(prettier@3.5.3))
+      webpack: 5.98.0(esbuild@0.25.1)
+    transitivePeerDependencies:
+      - storybook
+
+  '@storybook/addon-themes@8.6.7(storybook@8.6.6(prettier@3.5.3))':
+    dependencies:
       storybook: 8.6.6(prettier@3.5.3)
       ts-dedent: 2.2.0
 
@@ -10088,6 +10141,10 @@ snapshots:
       - webpack-dev-server
       - webpack-hot-middleware
       - webpack-plugin-serve
+
+  '@storybook/node-logger@8.6.7(storybook@8.6.6(prettier@3.5.3))':
+    dependencies:
+      storybook: 8.6.6(prettier@3.5.3)
 
   '@storybook/preset-react-webpack@8.6.6(@storybook/test@8.6.6(storybook@8.6.6(prettier@3.5.3)))(esbuild@0.25.1)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(storybook@8.6.6(prettier@3.5.3))(typescript@5.7.3)':
     dependencies:
@@ -10302,12 +10359,12 @@ snapshots:
 
   '@types/babel__generator@7.6.8':
     dependencies:
-      '@babel/types': 7.26.5
+      '@babel/types': 7.26.10
 
   '@types/babel__template@7.4.4':
     dependencies:
       '@babel/parser': 7.26.5
-      '@babel/types': 7.26.5
+      '@babel/types': 7.26.10
 
   '@types/babel__traverse@7.20.6':
     dependencies:
