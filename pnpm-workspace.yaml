@@ -9,6 +9,10 @@ catalog:
   "@types/node": 22.18.13
   "@types/react": 19.2.2
   "@types/react-dom": 19.2.2
+  "@types/mdx": "2.0.13"
+  "fumadocs-core": "16.0.9"
+  "fumadocs-mdx": "13.0.6"
+  "fumadocs-ui": "16.0.9"
   babel-plugin-react-compiler: 1.0.0
   class-variance-authority: 0.7.1
   clsx: 2.1.1

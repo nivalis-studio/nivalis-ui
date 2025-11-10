@@ -3,6 +3,7 @@
 	"compilerOptions": {
 		"target": "ES2022",
 		"lib": ["es2022", "DOM", "DOM.Iterable"],
+		"baseUrl": ".",
 		"allowJs": true,
 		"skipLibCheck": true,
 		"strict": true,
@@ -13,11 +14,12 @@
 		"moduleResolution": "Bundler",
 		"resolveJsonModule": true,
 		"isolatedModules": true,
-		"noUncheckedIndexedAccess": true,
 		"jsx": "react-jsx",
 		"incremental": true,
 		"paths": {
-			"@/*": ["./*"]
+			"@/*": ["./src/*"],
+			"@/registry": ["./registry/*"],
+			"@/.source": [".source"]
 		},
 		"plugins": [
 			{
@@ -26,8 +28,7 @@
 			{
 				"name": "workflow"
 			}
-		],
-		"baseUrl": "./src"
+		]
 	},
 	"include": [
 		"next-env.d.ts",

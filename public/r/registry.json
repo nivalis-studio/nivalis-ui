@@ -1,18 +1,16 @@
 {
-	"$schema": "https://ui.shadcn.com/schema/registry.json",
 	"name": "@nivalis/ui",
 	"homepage": "https://ui.nivalis.studio",
 	"items": [
 		{
 			"name": "button",
-			"type": "registry:item",
+			"type": "registry:ui",
 			"title": "Button",
 			"description": "A button component.",
 			"files": [
 				{
-					"path": "registry/niv/components/ui/button.tsx",
-					"type": "registry:file",
-					"target": "~/components/ui/button.tsx"
+					"path": "registry/niv/ui/button.tsx",
+					"type": "registry:ui"
 				}
 			]
 		}

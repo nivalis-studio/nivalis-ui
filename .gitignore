@@ -10,7 +10,6 @@
 # Icon must end with two \r
 Icon
 
-
 # Thumbnails
 ._*
 
@@ -221,11 +220,11 @@ sketch
 # Turborepo task cache
 .turbo
 
-### Vercel ###
-.vercel
-
 ### Miscellaneous ###
 *.pem
 
 ### Prisma ###
 /src/prisma/client/
+
+# generated content
+.source

@@ -1,5 +1,4 @@
 {
-	"$schema": "https://ui.shadcn.com/schema/registry.json",
 	"name": "@nivalis/ui",
 	"homepage": "https://ui.nivalis.studio",
 	"items": [
@@ -10,7 +9,7 @@
 			"description": "A button component.",
 			"files": [
 				{
-					"path": "registry/niv/components/ui/button.tsx",
+					"path": "registry/niv/ui/button.tsx",
 					"type": "registry:ui"
 				}
 			]

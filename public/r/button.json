@@ -1,15 +1,14 @@
 {
 	"$schema": "https://ui.shadcn.com/schema/registry-item.json",
 	"name": "button",
-	"type": "registry:item",
+	"type": "registry:ui",
 	"title": "Button",
 	"description": "A button component.",
 	"files": [
 		{
-			"path": "registry/niv/components/ui/button.tsx",
+			"path": "registry/niv/ui/button.tsx",
 			"content": "import { cva, type VariantProps } from 'class-variance-authority';\nimport type { ComponentProps } from 'react';\n\nconst buttonVariants = cva('', {\n  variants: {},\n});\n\ntype ButtonProps = ComponentProps<'button'> &\n  VariantProps<typeof buttonVariants> & {\n    asChild?: boolean;\n  };\n\nexport const Button = (_props: ButtonProps) => {\n  return null;\n};\n",
-			"type": "registry:file",
-			"target": "~/components/ui/button.tsx"
+			"type": "registry:ui"
 		}
 	]
 }
