@@ -65,4 +65,17 @@ export const ui: Registry['items'] = [
       },
     ],
   },
+  {
+    name: 'dialog',
+    type: 'registry:ui',
+    title: 'Dialog',
+    description: 'A dialog component.',
+    dependencies: ['@radix-ui/react-dialog'],
+    files: [
+      {
+        path: 'ui/dialog.tsx',
+        type: 'registry:ui',
+      },
+    ],
+  },
 ];
