@@ -1,7 +1,7 @@
-## @nivalis-studio/nextjs-template
+## ui.nivalis.studio
 
-### Install
+### Install a component
 
 ```bash
-pnpm create next-app --example https://github.com/nivalis-studio/nextjs-template
+pnpm dlx shadcn@latest add https://ui.nivalis.studio/r/button.json
 ```
