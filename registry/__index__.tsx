@@ -13,17 +13,18 @@ export const Index: Record<string, any> = {
     registryDependencies: undefined,
     files: [
       {
-        path: 'registry/default/ui/button.tsx',
+        path: 'registry/niv/ui/button.tsx',
         type: 'registry:ui',
         target: '',
       },
     ],
     component: React.lazy(async () => {
-      const mod = await import('@/registry/default/ui/button.tsx');
+      const mod = await import('@/registry/niv/ui/button.tsx');
       const exportName = Object.keys(mod).find(
         key => typeof mod[key] === 'function' || typeof mod[key] === 'object',
       );
-      return { default: mod.default || mod[exportName] };
+
+      return { default: mod[exportName] || mod.default };
     }),
     categories: undefined,
     meta: undefined,

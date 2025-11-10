@@ -11,5 +11,5 @@ type ButtonProps = ComponentProps<'button'> &
   };
 
 export const Button = (_props: ButtonProps) => {
-  return null;
+  return <button type='button'>button</button>;
 };

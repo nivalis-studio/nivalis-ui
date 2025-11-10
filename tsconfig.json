@@ -18,7 +18,7 @@
 		"incremental": true,
 		"paths": {
 			"@/*": ["./src/*"],
-			"@/registry": ["./registry/*"],
+			"@/registry/*": ["./registry/*"],
 			"@/.source": [".source"]
 		},
 		"plugins": [

@@ -32,14 +32,14 @@ import * as React from "react"
 export const Index: Record<string, any> = {`;
   for (const item of registry.items) {
     const resolveFiles = item.files?.map(
-      (file: RegistryFile) => `registry/default/${file.path}`,
+      (file: RegistryFile) => `registry/niv/${file.path}`,
     );
     if (!resolveFiles) {
       continue;
     }
 
     const componentPath = item.files?.[0]?.path
-      ? `@/registry/default/${item.files[0].path}`
+      ? `@/registry/niv/${item.files[0].path}`
       : '';
 
     index += `
@@ -49,7 +49,7 @@ export const Index: Record<string, any> = {`;
     type: "${item.type}",
     registryDependencies: ${JSON.stringify(item.registryDependencies)},
     files: [${item.files?.map((file: RegistryFile) => {
-      const filePath = `registry/default/${typeof file === 'string' ? file : file.path}`;
+      const filePath = `registry/niv/${typeof file === 'string' ? file : file.path}`;
       const resolvedFilePath = path.resolve(filePath);
       return typeof file === 'string'
         ? `"${resolvedFilePath}"`

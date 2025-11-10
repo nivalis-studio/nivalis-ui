@@ -78,3 +78,15 @@
   width: 6px;
   height: 6px;
 }
+
+.preview {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  width: 100%;
+  min-height: 450px;
+  padding: 2.5rem;
+  border: solid oklch(from var(--color-border) l c h / 0.7);
+  border-width: 0.5px 0.5px 0 0.5px;
+}
