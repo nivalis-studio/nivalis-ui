@@ -29,6 +29,7 @@
 		"@radix-ui/react-label": "catalog:",
 		"@radix-ui/react-select": "catalog:",
 		"@radix-ui/react-slot": "catalog:",
+		"@radix-ui/react-switch": "catalog:",
 		"@vercel/analytics": "catalog:",
 		"babel-plugin-react-compiler": "catalog:",
 		"class-variance-authority": "catalog:",
