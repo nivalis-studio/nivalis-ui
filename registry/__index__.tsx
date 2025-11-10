@@ -138,6 +138,28 @@ export const Index: Record<string, any> = {
     categories: undefined,
     meta: undefined,
   },
+  'sheet ': {
+    name: 'sheet ',
+    description: 'A sheet component.',
+    type: 'registry:ui',
+    registryDependencies: undefined,
+    files: [
+      {
+        path: 'registry/niv/ui/sheet.tsx',
+        type: 'registry:ui',
+        target: '',
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import('@/registry/niv/ui/sheet.tsx');
+      const exportName = Object.keys(mod).find(
+        key => typeof mod[key] === 'function' || typeof mod[key] === 'object',
+      );
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
   'context-menu': {
     name: 'context-menu',
     description: 'A context-menu component.',

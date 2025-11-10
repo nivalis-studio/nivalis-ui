@@ -79,6 +79,19 @@ export const ui: Registry['items'] = [
     ],
   },
   {
+    name: 'sheet ',
+    type: 'registry:ui',
+    title: 'Sheet',
+    description: 'A sheet component.',
+    dependencies: ['@radix-ui/react-dialog'],
+    files: [
+      {
+        path: 'ui/sheet.tsx',
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
     name: 'context-menu',
     type: 'registry:ui',
     title: 'ContextMenu',
