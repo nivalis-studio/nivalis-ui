@@ -1,0 +1,15 @@
+{
+	"$schema": "https://ui.shadcn.com/schema/registry-item.json",
+	"name": "avatar",
+	"type": "registry:ui",
+	"title": "Avatar",
+	"description": "An avatar component.",
+	"dependencies": ["@radix-ui/react-avatar"],
+	"files": [
+		{
+			"path": "registry/niv/ui/avatar.tsx",
+			"content": "'use client';\n\nimport { Fallback, Image, Root } from '@radix-ui/react-avatar';\nimport { cn } from '@/lib/classnames';\nimport type { ComponentProps } from 'react';\n\nconst AvatarRoot = ({ className, ...props }: ComponentProps<typeof Root>) => {\n  return (\n    <Root\n      className={cn(\n        'relative flex size-8 shrink-0 overflow-hidden rounded-full',\n        className,\n      )}\n      data-slot='avatar'\n      {...props}\n    />\n  );\n};\n\nconst AvatarImage = ({ className, ...props }: ComponentProps<typeof Image>) => {\n  return (\n    <Image\n      className={cn('aspect-square size-full', className)}\n      data-slot='avatar-image'\n      {...props}\n    />\n  );\n};\n\nconst AvatarFallback = ({\n  className,\n  ...props\n}: ComponentProps<typeof Fallback>) => {\n  return (\n    <Fallback\n      className={cn(\n        'flex size-full items-center justify-center rounded-full bg-muted',\n        className,\n      )}\n      data-slot='avatar-fallback'\n      {...props}\n    />\n  );\n};\n\nconst Avatar = Object.assign(AvatarRoot, {\n  Image: AvatarImage,\n  Fallback: AvatarFallback,\n});\n\nexport { Avatar };\n",
+			"type": "registry:ui"
+		}
+	]
+}

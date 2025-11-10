@@ -23,6 +23,7 @@
 	},
 	"dependencies": {
 		"@radix-ui/react-accordion": "catalog:",
+		"@radix-ui/react-avatar": "catalog:",
 		"@radix-ui/react-slot": "catalog:",
 		"@vercel/analytics": "catalog:",
 		"babel-plugin-react-compiler": "catalog:",
