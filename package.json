@@ -22,6 +22,7 @@
 		"ts": "next typegen && tsc --noEmit"
 	},
 	"dependencies": {
+		"@radix-ui/react-slot": "catalog:",
 		"@vercel/analytics": "catalog:",
 		"babel-plugin-react-compiler": "catalog:",
 		"class-variance-authority": "catalog:",
@@ -34,7 +35,7 @@
 		"postcss": "catalog:",
 		"react": "catalog:",
 		"react-dom": "catalog:",
-		"rimraf": "^6.1.0",
+		"rimraf": "catalog:",
 		"server-only": "catalog:",
 		"shadcn": "catalog:",
 		"tailwind-merge": "catalog:",

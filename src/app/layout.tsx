@@ -18,11 +18,7 @@ export const viewport: Viewport = {
 
 const Layout = ({ children }: PropsWithChildren) => {
   return (
-    <html
-      className={cn('dark font-mono', fonts)}
-      lang='en'
-      suppressHydrationWarning
-    >
+    <html className={cn('font-mono', fonts)} lang='en' suppressHydrationWarning>
       <body className='isolate'>
         <RootProvider>
           {children}

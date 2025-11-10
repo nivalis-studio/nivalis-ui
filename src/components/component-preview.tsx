@@ -5,7 +5,7 @@ type Props = {
   name: string;
 };
 
-export const ComponentPreview = ({ name }: Props) => {
+export const ComponentPreview = ({ name, ...props }: Props) => {
   const Component = Index[name]?.component;
 
   if (!Component) {
@@ -27,7 +27,7 @@ export const ComponentPreview = ({ name }: Props) => {
           'preview flex h-[450px] w-full items-center justify-center overflow-y-auto p-10 max-sm:px-6',
         )}
       >
-        <Component />
+        <Component {...props} />
       </div>
     </div>
   );
