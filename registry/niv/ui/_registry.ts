@@ -108,4 +108,17 @@ export const ui: Registry['items'] = [
       },
     ],
   },
+  {
+    name: 'select',
+    type: 'registry:ui',
+    title: 'Select',
+    description: 'A select component.',
+    dependencies: ['@radix-ui/react-select'],
+    files: [
+      {
+        path: 'ui/select.tsx',
+        type: 'registry:ui',
+      },
+    ],
+  },
 ];

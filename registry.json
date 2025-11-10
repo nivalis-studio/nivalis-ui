@@ -108,6 +108,19 @@
 					"type": "registry:ui"
 				}
 			]
+		},
+		{
+			"name": "select",
+			"type": "registry:ui",
+			"title": "Select",
+			"description": "A select component.",
+			"dependencies": ["@radix-ui/react-select"],
+			"files": [
+				{
+					"path": "registry/niv/ui/select.tsx",
+					"type": "registry:ui"
+				}
+			]
 		}
 	]
 }
