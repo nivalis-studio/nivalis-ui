@@ -80,6 +80,18 @@
 			]
 		},
 		{
+			"name": "card",
+			"type": "registry:ui",
+			"title": "Card",
+			"description": "A card component.",
+			"files": [
+				{
+					"path": "registry/niv/ui/card.tsx",
+					"type": "registry:ui"
+				}
+			]
+		},
+		{
 			"name": "command",
 			"type": "registry:ui",
 			"title": "Command",

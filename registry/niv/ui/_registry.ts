@@ -79,6 +79,18 @@ export const ui: Registry['items'] = [
     ],
   },
   {
+    name: 'card',
+    type: 'registry:ui',
+    title: 'Card',
+    description: 'A card component.',
+    files: [
+      {
+        path: 'ui/card.tsx',
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
     name: 'command',
     type: 'registry:ui',
     title: 'Command',
