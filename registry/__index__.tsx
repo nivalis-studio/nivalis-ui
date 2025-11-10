@@ -138,8 +138,8 @@ export const Index: Record<string, any> = {
     categories: undefined,
     meta: undefined,
   },
-  'sheet ': {
-    name: 'sheet ',
+  'sheet': {
+    name: 'sheet',
     description: 'A sheet component.',
     type: 'registry:ui',
     registryDependencies: undefined,
@@ -152,6 +152,28 @@ export const Index: Record<string, any> = {
     ],
     component: React.lazy(async () => {
       const mod = await import('@/registry/niv/ui/sheet.tsx');
+      const exportName = Object.keys(mod).find(
+        key => typeof mod[key] === 'function' || typeof mod[key] === 'object',
+      );
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  'toaster': {
+    name: 'toaster',
+    description: 'A toaster component.',
+    type: 'registry:ui',
+    registryDependencies: undefined,
+    files: [
+      {
+        path: 'registry/niv/ui/toaster.tsx',
+        type: 'registry:ui',
+        target: '',
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import('@/registry/niv/ui/toaster.tsx');
       const exportName = Object.keys(mod).find(
         key => typeof mod[key] === 'function' || typeof mod[key] === 'object',
       );

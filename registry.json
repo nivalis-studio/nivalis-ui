@@ -80,7 +80,7 @@
 			]
 		},
 		{
-			"name": "sheet ",
+			"name": "sheet",
 			"type": "registry:ui",
 			"title": "Sheet",
 			"description": "A sheet component.",
@@ -88,6 +88,19 @@
 			"files": [
 				{
 					"path": "registry/niv/ui/sheet.tsx",
+					"type": "registry:ui"
+				}
+			]
+		},
+		{
+			"name": "toaster",
+			"type": "registry:ui",
+			"title": "Toaster",
+			"description": "A toaster component.",
+			"dependencies": ["sonner"],
+			"files": [
+				{
+					"path": "registry/niv/ui/toaster.tsx",
 					"type": "registry:ui"
 				}
 			]

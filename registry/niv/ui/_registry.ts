@@ -79,7 +79,7 @@ export const ui: Registry['items'] = [
     ],
   },
   {
-    name: 'sheet ',
+    name: 'sheet',
     type: 'registry:ui',
     title: 'Sheet',
     description: 'A sheet component.',
@@ -87,6 +87,19 @@ export const ui: Registry['items'] = [
     files: [
       {
         path: 'ui/sheet.tsx',
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
+    name: 'toaster',
+    type: 'registry:ui',
+    title: 'Toaster',
+    description: 'A toaster component.',
+    dependencies: ['sonner'],
+    files: [
+      {
+        path: 'ui/toaster.tsx',
         type: 'registry:ui',
       },
     ],

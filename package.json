@@ -51,6 +51,7 @@
 		"rimraf": "catalog:",
 		"server-only": "catalog:",
 		"shadcn": "catalog:",
+		"sonner": "catalog:",
 		"tailwind-merge": "catalog:",
 		"turbo": "catalog:",
 		"vaul": "^1.1.2",
