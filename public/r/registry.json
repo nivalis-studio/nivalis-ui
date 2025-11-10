@@ -80,6 +80,19 @@
 			]
 		},
 		{
+			"name": "drawer",
+			"type": "registry:ui",
+			"title": "Drawer",
+			"description": "A drawer component.",
+			"dependencies": ["vaul"],
+			"files": [
+				{
+					"path": "registry/niv/ui/drawer.tsx",
+					"type": "registry:ui"
+				}
+			]
+		},
+		{
 			"name": "card",
 			"type": "registry:ui",
 			"title": "Card",

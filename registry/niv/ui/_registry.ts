@@ -79,6 +79,19 @@ export const ui: Registry['items'] = [
     ],
   },
   {
+    name: 'drawer',
+    type: 'registry:ui',
+    title: 'Drawer',
+    description: 'A drawer component.',
+    dependencies: ['vaul'],
+    files: [
+      {
+        path: 'ui/drawer.tsx',
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
     name: 'card',
     type: 'registry:ui',
     title: 'Card',

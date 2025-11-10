@@ -50,6 +50,7 @@
 		"shadcn": "catalog:",
 		"tailwind-merge": "catalog:",
 		"turbo": "catalog:",
+		"vaul": "^1.1.2",
 		"workflow": "catalog:",
 		"zod": "catalog:"
 	},
