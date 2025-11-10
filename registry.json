@@ -5,14 +5,13 @@
 	"items": [
 		{
 			"name": "button",
-			"type": "registry:item",
+			"type": "registry:ui",
 			"title": "Button",
 			"description": "A button component.",
 			"files": [
 				{
 					"path": "registry/niv/components/ui/button.tsx",
-					"type": "registry:file",
-					"target": "~/components/ui/button.tsx"
+					"type": "registry:ui"
 				}
 			]
 		}
