@@ -121,6 +121,18 @@
 					"type": "registry:ui"
 				}
 			]
+		},
+		{
+			"name": "textarea",
+			"type": "registry:ui",
+			"title": "Textarea",
+			"description": "A textarea component.",
+			"files": [
+				{
+					"path": "registry/niv/ui/textarea.tsx",
+					"type": "registry:ui"
+				}
+			]
 		}
 	]
 }

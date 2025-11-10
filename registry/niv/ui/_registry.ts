@@ -121,4 +121,16 @@ export const ui: Registry['items'] = [
       },
     ],
   },
+  {
+    name: 'textarea',
+    type: 'registry:ui',
+    title: 'Textarea',
+    description: 'A textarea component.',
+    files: [
+      {
+        path: 'ui/textarea.tsx',
+        type: 'registry:ui',
+      },
+    ],
+  },
 ];
