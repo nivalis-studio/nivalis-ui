@@ -80,6 +80,19 @@
 			]
 		},
 		{
+			"name": "context-menu",
+			"type": "registry:ui",
+			"title": "ContextMenu",
+			"description": "A context-menu component.",
+			"dependencies": ["@radix-ui/react-context-menu"],
+			"files": [
+				{
+					"path": "registry/niv/ui/context-menu.tsx",
+					"type": "registry:ui"
+				}
+			]
+		},
+		{
 			"name": "drawer",
 			"type": "registry:ui",
 			"title": "Drawer",

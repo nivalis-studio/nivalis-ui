@@ -79,6 +79,19 @@ export const ui: Registry['items'] = [
     ],
   },
   {
+    name: 'context-menu',
+    type: 'registry:ui',
+    title: 'ContextMenu',
+    description: 'A context-menu component.',
+    dependencies: ['@radix-ui/react-context-menu'],
+    files: [
+      {
+        path: 'ui/context-menu.tsx',
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
     name: 'drawer',
     type: 'registry:ui',
     title: 'Drawer',
