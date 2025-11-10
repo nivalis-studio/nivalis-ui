@@ -116,4 +116,53 @@ export const Index: Record<string, any> = {
     categories: undefined,
     meta: undefined,
   },
+  'dialog': {
+    name: 'dialog',
+    description: 'A dialog component.',
+    type: 'registry:ui',
+    registryDependencies: undefined,
+    files: [
+      {
+        path: 'registry/niv/ui/dialog.tsx',
+        type: 'registry:ui',
+        target: '',
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import('@/registry/niv/ui/dialog.tsx');
+      const exportName = Object.keys(mod).find(
+        key => typeof mod[key] === 'function' || typeof mod[key] === 'object',
+      );
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  'command': {
+    name: 'command',
+    description: 'A command component.',
+    type: 'registry:ui',
+    registryDependencies: undefined,
+    files: [
+      {
+        path: 'registry/niv/ui/dialog.tsx',
+        type: 'registry:ui',
+        target: '',
+      },
+      {
+        path: 'registry/niv/ui/command.tsx',
+        type: 'registry:ui',
+        target: '',
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import('@/registry/niv/ui/dialog.tsx');
+      const exportName = Object.keys(mod).find(
+        key => typeof mod[key] === 'function' || typeof mod[key] === 'object',
+      );
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
 };

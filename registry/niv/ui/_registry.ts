@@ -78,4 +78,21 @@ export const ui: Registry['items'] = [
       },
     ],
   },
+  {
+    name: 'command',
+    type: 'registry:ui',
+    title: 'Command',
+    description: 'A command component.',
+    dependencies: ['@radix-ui/react-dialog', 'cmdk'],
+    files: [
+      {
+        path: 'ui/dialog.tsx',
+        type: 'registry:ui',
+      },
+      {
+        path: 'ui/command.tsx',
+        type: 'registry:ui',
+      },
+    ],
+  },
 ];

@@ -65,6 +65,36 @@
 					"type": "registry:ui"
 				}
 			]
+		},
+		{
+			"name": "dialog",
+			"type": "registry:ui",
+			"title": "Dialog",
+			"description": "A dialog component.",
+			"dependencies": ["@radix-ui/react-dialog"],
+			"files": [
+				{
+					"path": "registry/niv/ui/dialog.tsx",
+					"type": "registry:ui"
+				}
+			]
+		},
+		{
+			"name": "command",
+			"type": "registry:ui",
+			"title": "Command",
+			"description": "A command component.",
+			"dependencies": ["@radix-ui/react-dialog", "cmdk"],
+			"files": [
+				{
+					"path": "registry/niv/ui/dialog.tsx",
+					"type": "registry:ui"
+				},
+				{
+					"path": "registry/niv/ui/command.tsx",
+					"type": "registry:ui"
+				}
+			]
 		}
 	]
 }
