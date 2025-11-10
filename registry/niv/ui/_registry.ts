@@ -40,4 +40,16 @@ export const ui: Registry['items'] = [
       },
     ],
   },
+  {
+    name: 'badge',
+    type: 'registry:ui',
+    title: 'Badge',
+    description: 'A badge component.',
+    files: [
+      {
+        path: 'ui/badge.tsx',
+        type: 'registry:ui',
+      },
+    ],
+  },
 ];
