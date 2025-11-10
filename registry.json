@@ -52,6 +52,19 @@
 					"type": "registry:ui"
 				}
 			]
+		},
+		{
+			"name": "checkbox",
+			"type": "registry:ui",
+			"title": "Checkbox",
+			"description": "A checkbox component.",
+			"dependencies": ["@radix-ui/react-checkbox"],
+			"files": [
+				{
+					"path": "registry/niv/ui/checkbox.tsx",
+					"type": "registry:ui"
+				}
+			]
 		}
 	]
 }

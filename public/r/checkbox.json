@@ -1,0 +1,15 @@
+{
+	"$schema": "https://ui.shadcn.com/schema/registry-item.json",
+	"name": "checkbox",
+	"type": "registry:ui",
+	"title": "Checkbox",
+	"description": "A checkbox component.",
+	"dependencies": ["@radix-ui/react-checkbox"],
+	"files": [
+		{
+			"path": "registry/niv/ui/checkbox.tsx",
+			"content": "'use client';\n\nimport { Indicator, Root } from '@radix-ui/react-checkbox';\nimport { CheckIcon } from 'lucide-react';\nimport { cn } from '@/lib/classnames';\nimport type * as React from 'react';\n\nconst Checkbox = ({\n  className,\n  ...props\n}: React.ComponentProps<typeof Root>) => {\n  return (\n    <Root\n      className={cn(\n        'peer size-4 shrink-0 rounded-lg border border-input shadow-xs outline-none transition-shadow focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:cursor-not-allowed disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 data-[state=checked]:border-primary data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground dark:bg-input/30 dark:data-[state=checked]:bg-primary dark:aria-invalid:ring-destructive/40',\n        className,\n      )}\n      data-slot='checkbox'\n      {...props}\n    >\n      <Indicator\n        className='grid place-content-center text-current transition-none'\n        data-slot='checkbox-indicator'\n      >\n        <CheckIcon className='size-3.5' />\n      </Indicator>\n    </Root>\n  );\n};\n\nexport { Checkbox };\n",
+			"type": "registry:ui"
+		}
+	]
+}
