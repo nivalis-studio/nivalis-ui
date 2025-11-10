@@ -14,6 +14,19 @@
 					"type": "registry:ui"
 				}
 			]
+		},
+		{
+			"name": "accordion",
+			"type": "registry:ui",
+			"title": "Accordion",
+			"description": "An accordion component.",
+			"dependencies": ["@radix-ui/react-accordion"],
+			"files": [
+				{
+					"path": "registry/niv/ui/accordion.tsx",
+					"type": "registry:ui"
+				}
+			]
 		}
 	]
 }

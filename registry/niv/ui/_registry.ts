@@ -14,4 +14,17 @@ export const ui: Registry['items'] = [
       },
     ],
   },
+  {
+    name: 'accordion',
+    type: 'registry:ui',
+    title: 'Accordion',
+    description: 'An accordion component.',
+    dependencies: ['@radix-ui/react-accordion'],
+    files: [
+      {
+        path: 'ui/accordion.tsx',
+        type: 'registry:ui',
+      },
+    ],
+  },
 ];

@@ -23,8 +23,29 @@ export const Index: Record<string, any> = {
       const exportName = Object.keys(mod).find(
         key => typeof mod[key] === 'function' || typeof mod[key] === 'object',
       );
-
-      return { default: mod[exportName] || mod.default };
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  'accordion': {
+    name: 'accordion',
+    description: 'An accordion component.',
+    type: 'registry:ui',
+    registryDependencies: undefined,
+    files: [
+      {
+        path: 'registry/niv/ui/accordion.tsx',
+        type: 'registry:ui',
+        target: '',
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import('@/registry/niv/ui/accordion.tsx');
+      const exportName = Object.keys(mod).find(
+        key => typeof mod[key] === 'function' || typeof mod[key] === 'object',
+      );
+      return { default: mod.default || mod[exportName] };
     }),
     categories: undefined,
     meta: undefined,
