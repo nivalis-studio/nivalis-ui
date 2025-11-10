@@ -1,0 +1,15 @@
+{
+	"$schema": "https://ui.shadcn.com/schema/registry-item.json",
+	"name": "label",
+	"type": "registry:ui",
+	"title": "Label",
+	"description": "A label component.",
+	"dependencies": ["@radix-ui/react-label"],
+	"files": [
+		{
+			"path": "registry/niv/ui/label.tsx",
+			"content": "'use client';\n\nimport { Root } from '@radix-ui/react-label';\nimport { cn } from '@/lib/classnames';\nimport type { ComponentProps } from 'react';\n\nfunction Label({ className, ...props }: ComponentProps<typeof Root>) {\n  return (\n    <Root\n      className={cn(\n        'flex select-none items-center gap-2 font-medium text-sm leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-50 group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50',\n        className,\n      )}\n      data-slot='label'\n      {...props}\n    />\n  );\n}\n\nexport { Label };\n",
+			"type": "registry:ui"
+		}
+	]
+}

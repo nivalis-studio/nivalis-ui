@@ -95,6 +95,19 @@
 					"type": "registry:ui"
 				}
 			]
+		},
+		{
+			"name": "label",
+			"type": "registry:ui",
+			"title": "Label",
+			"description": "A label component.",
+			"dependencies": ["@radix-ui/react-label"],
+			"files": [
+				{
+					"path": "registry/niv/ui/label.tsx",
+					"type": "registry:ui"
+				}
+			]
 		}
 	]
 }

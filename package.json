@@ -26,6 +26,7 @@
 		"@radix-ui/react-avatar": "catalog:",
 		"@radix-ui/react-checkbox": "catalog:",
 		"@radix-ui/react-dialog": "catalog:",
+		"@radix-ui/react-label": "catalog:",
 		"@radix-ui/react-slot": "catalog:",
 		"@vercel/analytics": "catalog:",
 		"babel-plugin-react-compiler": "catalog:",
