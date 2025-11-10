@@ -118,6 +118,19 @@ export const ui: Registry['items'] = [
     ],
   },
   {
+    name: 'popover',
+    type: 'registry:ui',
+    title: 'Popover',
+    description: 'A popover component.',
+    dependencies: ['@radix-ui/react-popover'],
+    files: [
+      {
+        path: 'ui/popover.tsx',
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
     name: 'card',
     type: 'registry:ui',
     title: 'Card',
