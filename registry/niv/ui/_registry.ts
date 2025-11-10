@@ -92,6 +92,19 @@ export const ui: Registry['items'] = [
     ],
   },
   {
+    name: 'dropdown-menu',
+    type: 'registry:ui',
+    title: 'DropdownMenu',
+    description: 'A dropdown-menu component.',
+    dependencies: ['@radix-ui/react-dropdown-menu'],
+    files: [
+      {
+        path: 'ui/dropdown-menu.tsx',
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
     name: 'drawer',
     type: 'registry:ui',
     title: 'Drawer',
