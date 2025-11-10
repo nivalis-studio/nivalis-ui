@@ -1,0 +1,53 @@
+{
+	"name": "@nivalis/template",
+	"type": "module",
+	"version": "0.1.0",
+	"private": true,
+	"packageManager": "pnpm@10.20.0+sha512.cf9998222162dd85864d0a8102e7892e7ba4ceadebbf5a31f9c2fce48dfce317a9c53b9f6464d1ef9042cba2e02ae02a9f7c143a2b438cd93c91840f0192b9dd",
+	"engines": {
+		"node": "22.x",
+		"pnpm": "10.x"
+	},
+	"scripts": {
+		"dev": "NEXT_TELEMETRY_DISABLED=1 NODE_NO_WARNINGS=1 next dev",
+		"build": "NEXT_TELEMETRY_DISABLED=1 NODE_NO_WARNINGS=1 next build",
+		"start": "NEXT_TELEMETRY_DISABLED=1 NODE_NO_WARNINGS=1 next start",
+		"lint": "biome check",
+		"lint:fix": "biome check --write",
+		"prepare": "lefthook install",
+		"registry:build": "shadcn build",
+		"ts": "next typegen && tsc --noEmit"
+	},
+	"dependencies": {
+		"@vercel/analytics": "catalog:",
+		"babel-plugin-react-compiler": "catalog:",
+		"class-variance-authority": "catalog:",
+		"clsx": "catalog:",
+		"lucide-react": "catalog:",
+		"next": "catalog:",
+		"postcss": "catalog:",
+		"react": "catalog:",
+		"react-dom": "catalog:",
+		"server-only": "catalog:",
+		"shadcn": "catalog:",
+		"tailwind-merge": "catalog:",
+		"turbo": "catalog:",
+		"workflow": "catalog:",
+		"zod": "catalog:"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "catalog:",
+		"@commitlint/cli": "catalog:",
+		"@commitlint/config-conventional": "catalog:",
+		"@nivalis/biome-config": "catalog:",
+		"@tailwindcss/postcss": "catalog:",
+		"@total-typescript/ts-reset": "catalog:",
+		"@types/node": "catalog:",
+		"@types/react": "catalog:",
+		"@types/react-dom": "catalog:",
+		"lefthook": "catalog:",
+		"tailwindcss": "catalog:",
+		"tailwindcss-animate": "catalog:",
+		"typescript": "catalog:"
+	}
+}
