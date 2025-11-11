@@ -1,0 +1,15 @@
+{
+	"$schema": "https://ui.shadcn.com/schema/registry-item.json",
+	"name": "tooltip",
+	"type": "registry:ui",
+	"title": "Tooltip",
+	"description": "A tooltip component.",
+	"dependencies": ["@radix-ui/react-tooltip"],
+	"files": [
+		{
+			"path": "registry/niv/ui/tooltip.tsx",
+			"content": "'use client';\n\nimport {\n  Arrow,\n  Content,\n  Portal,\n  Provider,\n  Root,\n  Trigger,\n} from '@radix-ui/react-tooltip';\nimport { cn } from '@/lib/classnames';\nimport type { ComponentProps } from 'react';\n\nfunction TooltipProvider({\n  delayDuration = 0,\n  ...props\n}: ComponentProps<typeof Provider>) {\n  return (\n    <Provider\n      data-slot='tooltip-provider'\n      delayDuration={delayDuration}\n      {...props}\n    />\n  );\n}\n\nfunction TooltipRoot({ ...props }: ComponentProps<typeof Root>) {\n  return (\n    <TooltipProvider>\n      <Root data-slot='tooltip' {...props} />\n    </TooltipProvider>\n  );\n}\n\nfunction TooltipTrigger({ ...props }: ComponentProps<typeof Trigger>) {\n  return <Trigger data-slot='tooltip-trigger' {...props} />;\n}\n\nfunction TooltipContent({\n  className,\n  sideOffset = 0,\n  children,\n  ...props\n}: ComponentProps<typeof Content>) {\n  return (\n    <Portal>\n      <Content\n        className={cn(\n          'fade-in-0 zoom-in-95 data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 z-50 w-fit origin-(--radix-tooltip-content-transform-origin) animate-in text-balance rounded-md bg-foreground px-3 py-1.5 text-background text-xs data-[state=closed]:animate-out',\n          className,\n        )}\n        data-slot='tooltip-content'\n        sideOffset={sideOffset}\n        {...props}\n      >\n        {children}\n        <Arrow className='z-50 size-2.5 translate-y-[calc(-50%_-_2px)] rotate-45 rounded-[2px] bg-foreground fill-foreground' />\n      </Content>\n    </Portal>\n  );\n}\n\nconst Tooltip = Object.assign(TooltipRoot, {\n  Trigger: TooltipTrigger,\n  Content: TooltipContent,\n});\n\nexport { Tooltip, TooltipProvider };\n",
+			"type": "registry:ui"
+		}
+	]
+}

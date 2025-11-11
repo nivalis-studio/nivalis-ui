@@ -144,6 +144,19 @@ export const ui: Registry['items'] = [
     ],
   },
   {
+    name: 'tooltip',
+    type: 'registry:ui',
+    title: 'Tooltip',
+    description: 'A tooltip component.',
+    dependencies: ['@radix-ui/react-tooltip'],
+    files: [
+      {
+        path: 'ui/tooltip.tsx',
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
     name: 'drawer',
     type: 'registry:ui',
     title: 'Drawer',

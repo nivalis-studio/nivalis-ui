@@ -1,5 +1,5 @@
 {
-	"name": "@nivalis/template",
+	"name": "@nivalis/ui",
 	"type": "module",
 	"version": "0.1.0",
 	"private": true,
@@ -35,6 +35,7 @@
 		"@radix-ui/react-slot": "catalog:",
 		"@radix-ui/react-switch": "catalog:",
 		"@radix-ui/react-toggle": "catalog:",
+		"@radix-ui/react-tooltip": "catalog:",
 		"@vercel/analytics": "catalog:",
 		"babel-plugin-react-compiler": "catalog:",
 		"class-variance-authority": "catalog:",
