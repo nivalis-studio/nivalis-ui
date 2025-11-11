@@ -15,6 +15,19 @@ export const ui: Registry['items'] = [
     ],
   },
   {
+    name: 'breadcrumb',
+    type: 'registry:ui',
+    title: 'Breadcrumb',
+    description: 'A breadcrumb component.',
+    dependencies: ['@radix-ui/react-slot'],
+    files: [
+      {
+        path: 'ui/breadcrumb.tsx',
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
     name: 'accordion',
     type: 'registry:ui',
     title: 'Accordion',
