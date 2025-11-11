@@ -1,4 +1,5 @@
 import { colors } from './colors';
+import { effects } from './effects';
 import type { Registry } from 'shadcn/schema';
 
 export const theme: Registry['items'] = [
@@ -19,7 +20,14 @@ export const theme: Registry['items'] = [
       },
     },
     cssVars: {
-      ...colors,
+      dark: {
+        ...colors.dark,
+        ...effects.dark,
+      },
+      light: {
+        ...colors.light,
+        ...effects.light,
+      },
     },
   },
 ];

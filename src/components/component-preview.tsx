@@ -24,7 +24,7 @@ export const ComponentPreview = ({ name, ...props }: Props) => {
     <div>
       <div
         className={cn(
-          'relative flex h-[450px] min-h-[450px] w-full items-center justify-center overflow-y-auto rounded-3xl border bg-neutral-800 p-10 max-sm:px-6',
+          'relative flex h-[450px] min-h-[450px] w-full items-center justify-center overflow-y-auto rounded-3xl border border-border-strong bg-bg-component p-10 max-sm:px-6',
         )}
       >
         <Component {...props} />

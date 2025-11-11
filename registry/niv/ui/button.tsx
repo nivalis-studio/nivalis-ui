@@ -4,32 +4,42 @@ import { cn } from '@/lib/classnames';
 import type { ComponentProps } from 'react';
 
 const buttonVariants = cva(
-  'inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md font-medium text-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:focus-visible:ring-gray-300 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0',
+  'disabled:fg-disabled inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md font-medium text-sm transition-colors focus-visible:border-base focus-visible:outline-none focus-visible:ring-1 disabled:pointer-events-none disabled:cursor-not-allowed disabled:bg-disabled disabled:shadow-buttons-neutral disabled:after:hidden [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0',
   {
     variants: {
       variant: {
-        default:
-          'bg-gray-900 text-gray-50 shadow hover:bg-gray-900/90 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90',
-        destructive:
-          'bg-red-500 text-gray-50 shadow-sm hover:bg-red-500/90 dark:bg-red-900 dark:text-gray-50 dark:hover:bg-red-900/90',
+        primary: cn(
+          'after:button-inverted-gradient bg-button-inverted text-contrast-fg-primary shadow-buttons-inverted',
+          'hover:after:button-inverted-hover-gradient hover:bg-button-inverted-hover',
+          'active:after:button-inverted-pressed-gradient active:bg-button-inverted-pressed',
+          'focus-visible:!shadow-buttons-inverted-focus',
+        ),
+        secondary: cn(
+          'after:button-neutral-gradient bg-button-neutral text-fg-base shadow-buttons-neutral',
+          'hover:after:button-neutral-hover-gradient hover:bg-button-neutral-hover',
+          'active:after:button-neutral-pressed-gradient active:bg-button-neutral-pressed',
+          'focus-visible:shadow-buttons-neutral-focus',
+        ),
+        destructive: cn(
+          'after:button-danger-gradient bg-button-danger text-fg-on-color shadow-buttons-colored shadow-buttons-danger',
+          'hover:after:button-danger-hover-gradient hover:bg-button-danger-hover',
+          'active:after:button-danger-pressed-gradient active:bg-button-danger-pressed',
+          'focus-visible:shadow-buttons-danger-focus',
+        ),
         outline:
-          'border border-gray-200 bg-white shadow-sm hover:bg-gray-100 hover:text-gray-900 dark:border-gray-800 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50',
-        secondary:
-          'bg-gray-100 text-gray-900 shadow-sm hover:bg-gray-100/80 dark:bg-gray-800 dark:text-gray-50 dark:hover:bg-gray-800/80',
-        ghost:
-          'hover:bg-gray-100 hover:text-gray-900 dark:hover:bg-gray-800 dark:hover:text-gray-50',
-        link: 'text-gray-900 underline-offset-4 hover:underline dark:text-gray-50',
+          'border border-gray-200 bg-white shadow-sm hover:bg-gray-100 hover:text-gray-900',
+        ghost: 'hover:bg-gray-100 hover:text-gray-900',
       },
       size: {
-        default: 'h-9 px-4 py-2',
         sm: 'h-8 rounded-md px-3 text-xs',
+        md: 'h-9 px-4 py-2',
         lg: 'h-10 rounded-md px-8',
         icon: 'h-9 w-9',
       },
     },
     defaultVariants: {
-      variant: 'default',
-      size: 'default',
+      variant: 'primary',
+      size: 'md',
     },
   },
 );

@@ -8,18 +8,583 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --radius: 0.6rem;
+  --radius: 0.625rem;
   --ease-in-out-quart: cubic-bezier(0.76, 0, 0.24, 1);
 
-  --color-border: oklch(0.9197 0.004 286.32);
-  --color-foreground: oklch(21.34% 0 0);
-  --color-background: oklch(100% 0 0);
+  --alpha-250: oklch(0.2103 0.0059 285.8851 / 0.1);
+  --alpha-400: oklch(0.2103 0.0059 285.8851 / 0.24);
+  --bg-base: oklch(1 0 none);
+  --bg-base-hover: oklch(0.9674 0.0013 286.3748);
+  --bg-base-pressed: oklch(0.9197 0.004 286.3201);
+  --bg-component: oklch(0.9851 0 none);
+  --bg-component-hover: oklch(0.9674 0.0013 286.3748);
+  --bg-component-pressed: oklch(0.9197 0.004 286.3201);
+  --bg-disabled: oklch(0.9674 0.0013 286.3748);
+  --bg-field: oklch(0.9851 0 none);
+  --bg-field-hover: oklch(0.9674 0.0013 286.3748);
+  --bg-field-component: oklch(1 0 none);
+  --bg-field-component-hover: oklch(0.9851 0 none);
+  --bg-highlight: oklch(0.9705 0.0142 254.6042);
+  --bg-highlight-hover: oklch(0.9319 0.0316 255.5855);
+  --bg-interactive: oklch(0.6231 0.188 259.8145);
+  --bg-overlay: oklch(0.2103 0.0059 285.8851 / 0.4);
+  --bg-subtle: oklch(0.9851 0 none);
+  --bg-subtle-hover: oklch(0.9674 0.0013 286.3748);
+  --bg-subtle-pressed: oklch(0.9197 0.004 286.3201);
+  --bg-switch-off: oklch(0.9197 0.004 286.3201);
+  --bg-switch-off-hover: oklch(0.8711 0.0055 286.2859);
+  --border-base: oklch(0.9197 0.004 286.3201);
+  --border-danger: oklch(0.5143 0.1978 16.935);
+  --border-error: oklch(0.5858 0.222 17.5846);
+  --border-interactive: oklch(0.6231 0.188 259.8145);
+  --border-menu-bot: oklch(1 0 none);
+  --border-menu-top: oklch(0.9197 0.004 286.3201);
+  --border-strong: oklch(0.8711 0.0055 286.2859);
+  --border-transparent: oklch(1 0 none / 0);
+  --button-danger: oklch(0.5858 0.222 17.5846);
+  --button-danger-hover: oklch(0.5143 0.1978 16.935);
+  --button-danger-pressed: oklch(0.4546 0.1713 13.6968);
+  --button-inverted: oklch(0.2739 0.0055 286.0326);
+  --button-inverted-hover: oklch(0.3703 0.0119 285.8054);
+  --button-inverted-pressed: oklch(0.4419 0.0146 285.7864);
+  --button-neutral: oklch(1 0 none);
+  --button-neutral-hover: oklch(0.9674 0.0013 286.3748);
+  --button-neutral-pressed: oklch(0.9197 0.004 286.3201);
+  --button-transparent: oklch(1 0 none / 0);
+  --button-transparent-hover: oklch(0.9674 0.0013 286.3748);
+  --button-transparent-pressed: oklch(0.9197 0.004 286.3201);
+  --contrast-bg-base: oklch(0.2103 0.0059 285.8851);
+  --contrast-bg-base-hover: oklch(0.2739 0.0055 286.0326);
+  --contrast-bg-base-pressed: oklch(0.3703 0.0119 285.8054);
+  --contrast-bg-subtle: oklch(0.2739 0.0055 286.0326);
+  --contrast-border-base: oklch(1 0 none / 0.15);
+  --contrast-border-bot: oklch(1 0 none / 0.1);
+  --contrast-border-top: oklch(0.2103 0.0059 285.8851);
+  --contrast-fg-primary: oklch(1 0 none / 0.88);
+  --contrast-fg-secondary: oklch(1 0 none / 0.56);
+  --fg-base: oklch(0.2103 0.0059 285.8851);
+  --fg-disabled: oklch(0.7118 0.0129 286.0665);
+  --fg-error: oklch(0.5858 0.222 17.5846);
+  --fg-interactive: oklch(0.6231 0.188 259.8145);
+  --fg-interactive-hover: oklch(0.5461 0.2152 262.8809);
+  --fg-muted: oklch(0.5517 0.0138 285.9384);
+  --fg-on-color: oklch(1 0 none);
+  --fg-on-inverted: oklch(1 0 none);
+  --fg-subtle: oklch(0.4419 0.0146 285.7864);
+  --tag-blue-bg: oklch(0.9319 0.0316 255.5855);
+  --tag-blue-bg-hover: oklch(0.8823 0.0571 254.1284);
+  --tag-blue-border: oklch(0.8823 0.0571 254.1284);
+  --tag-blue-icon: oklch(0.7137 0.1434 254.624);
+  --tag-blue-text: oklch(0.4244 0.1809 265.6377);
+  --tag-green-bg: oklch(0.9505 0.0507 163.0508);
+  --tag-green-bg-hover: oklch(0.9049 0.0895 164.1501);
+  --tag-green-border: oklch(0.9049 0.0895 164.1501);
+  --tag-green-icon: oklch(0.6959 0.1491 162.4796);
+  --tag-green-text: oklch(0.4318 0.0865 166.9128);
+  --tag-neutral-bg: oklch(0.9674 0.0013 286.3748);
+  --tag-neutral-bg-hover: oklch(0.9197 0.004 286.3201);
+  --tag-neutral-border: oklch(0.9197 0.004 286.3201);
+  --tag-neutral-icon: oklch(0.7118 0.0129 286.0665);
+  --tag-neutral-text: oklch(0.4419 0.0146 285.7864);
+  --tag-orange-bg: oklch(0.9542 0.0372 75.1643);
+  --tag-orange-bg-hover: oklch(0.9015 0.0729 70.6972);
+  --tag-orange-border: oklch(0.9015 0.0729 70.6972);
+  --tag-orange-icon: oklch(0.7049 0.1867 47.6044);
+  --tag-orange-text: oklch(0.4698 0.143 37.3035);
+  --tag-purple-bg: oklch(0.9433 0.0284 294.5878);
+  --tag-purple-bg-hover: oklch(0.8943 0.0549 293.2829);
+  --tag-purple-border: oklch(0.8943 0.0549 293.2829);
+  --tag-purple-icon: oklch(0.709 0.1592 293.5412);
+  --tag-purple-text: oklch(0.432 0.2106 292.7591);
+  --tag-red-bg: oklch(0.9414 0.0298 12.5804);
+  --tag-red-bg-hover: oklch(0.8924 0.0559 10.0008);
+  --tag-red-border: oklch(0.8924 0.0559 10.0008);
+  --tag-red-icon: oklch(0.645 0.2154 16.4393);
+  --tag-red-text: oklch(0.4546 0.1713 13.6968);
+  --buttons-danger-focus:
+    0px 0.75px 0px 0px rgba(255, 255, 255, 0.2) inset, 0px 1px 2px 0px rgba(
+      190,
+      18,
+      60,
+      0.4
+    ), 0px 0px 0px 1px rgba(190, 18, 60, 1), 0px 0px 0px 2px rgba(
+      255,
+      255,
+      255,
+      1
+    ), 0px 0px 0px 4px rgba(59, 130, 246, 0.6);
+  --details-contrast-on-bg-interactive: 0px 1px 2px 0px rgba(30, 58, 138, 0.6);
+  --borders-error:
+    0px 0px 0px 1px rgba(225, 29, 72, 1), 0px 0px 0px 3px
+    rgba(225, 29, 72, 0.15);
+  --borders-focus:
+    0px 0px 0px 1px rgba(255, 255, 255, 1), 0px 0px 0px 3px
+    rgba(59, 130, 246, 0.6);
+  --buttons-danger:
+    0px 0.75px 0px 0px rgba(255, 255, 255, 0.2) inset, 0px 1px 2px 0px rgba(
+      190,
+      18,
+      60,
+      0.4
+    ), 0px 0px 0px 1px rgba(190, 18, 60, 1);
+  --buttons-inverted-focus:
+    0px 0.75px 0px 0px rgba(255, 255, 255, 0.2) inset, 0px 1px 2px 0px rgba(
+      0,
+      0,
+      0,
+      0.4
+    ), 0px 0px 0px 1px rgba(24, 24, 27, 1), 0px 0px 0px 2px rgba(
+      255,
+      255,
+      255,
+      1
+    ), 0px 0px 0px 4px rgba(59, 130, 246, 0.6);
+  --elevation-card-hover:
+    0px 0px 0px 1px rgba(0, 0, 0, 0.08), 0px 1px 2px -1px rgba(0, 0, 0, 0.08), 0px 2px 8px 0px rgba(
+      0,
+      0,
+      0,
+      0.1
+    );
+  --details-switch-handle:
+    0px 0px 2px 1px rgba(255, 255, 255, 1) inset, 0px 1px 0px 0px rgba(
+      255,
+      255,
+      255,
+      1
+    ) inset, 0px 0px 0px 0.5px rgba(0, 0, 0, 0.02), 0px 5px 4px 0px rgba(
+      0,
+      0,
+      0,
+      0.02
+    ), 0px 3px 3px 0px rgba(0, 0, 0, 0.04), 0px 1px 2px 0px rgba(0, 0, 0, 0.12), 0px 0px 1px 0px rgba(
+      0,
+      0,
+      0,
+      0.08
+    );
+  --buttons-neutral:
+    0px 1px 2px 0px rgba(0, 0, 0, 0.12), 0px 0px 0px 1px rgba(0, 0, 0, 0.08);
+  --borders-base:
+    0px 1px 2px 0px rgba(0, 0, 0, 0.12), 0px 0px 0px 1px rgba(0, 0, 0, 0.08);
+  --elevation-card-rest:
+    0px 0px 0px 1px rgba(0, 0, 0, 0.08), 0px 1px 2px -1px rgba(0, 0, 0, 0.08), 0px 2px 4px 0px rgba(
+      0,
+      0,
+      0,
+      0.04
+    );
+  --buttons-neutral-focus:
+    0px 1px 2px 0px rgba(0, 0, 0, 0.12), 0px 0px 0px 1px rgba(0, 0, 0, 0.08), 0px 0px 0px 2px rgba(
+      255,
+      255,
+      255,
+      1
+    ), 0px 0px 0px 4px rgba(59, 130, 246, 0.6);
+  --details-switch-background-focus:
+    0px 0px 0px 1px rgba(255, 255, 255, 1), 0px 0px 0px 3px rgba(
+      59,
+      130,
+      246,
+      0.6
+    ), 0px 1px 1px 0px rgba(0, 0, 0, 0.04) inset, 0px 2px 4px 0px rgba(
+      0,
+      0,
+      0,
+      0.04
+    ) inset, 0px 0px 0px 0.75px rgba(0, 0, 0, 0.06) inset, 0px 0px 8px 0px rgba(
+      0,
+      0,
+      0,
+      0.02
+    ) inset, 0px 2px 4px 0px rgba(0, 0, 0, 0.04);
+  --details-switch-background:
+    0px 1px 1px 0px rgba(0, 0, 0, 0.04) inset, 0px 2px 4px 0px rgba(
+      0,
+      0,
+      0,
+      0.04
+    ) inset, 0px 0px 0px 0.75px rgba(0, 0, 0, 0.06) inset, 0px 0px 8px 0px rgba(
+      0,
+      0,
+      0,
+      0.02
+    ) inset, 0px 2px 4px 0px rgba(0, 0, 0, 0.04);
+  --elevation-flyout:
+    0px 0px 0px 1px rgba(0, 0, 0, 0.08), 0px 4px 8px 0px rgba(0, 0, 0, 0.08), 0px 8px 16px 0px rgba(
+      0,
+      0,
+      0,
+      0.08
+    );
+  --elevation-tooltip:
+    0px 0px 0px 1px rgba(0, 0, 0, 0.08), 0px 2px 4px 0px rgba(0, 0, 0, 0.08), 0px 4px 8px 0px rgba(
+      0,
+      0,
+      0,
+      0.08
+    );
+  --elevation-modal:
+    0px 0px 0px 1px rgba(255, 255, 255, 1) inset, 0px 0px 0px 1.5px rgba(
+      228,
+      228,
+      231,
+      0.6
+    ) inset, 0px 0px 0px 1px rgba(0, 0, 0, 0.08), 0px 8px 16px 0px rgba(
+      0,
+      0,
+      0,
+      0.08
+    ), 0px 16px 32px 0px rgba(0, 0, 0, 0.08);
+  --elevation-code-block:
+    0px 0px 0px 1px rgba(24, 24, 27, 1) inset, 0px 0px 0px 1.5px
+    rgba(255, 255, 255, 0.2) inset;
+  --buttons-inverted:
+    0px 0.75px 0px 0px rgba(255, 255, 255, 0.2) inset, 0px 1px 2px 0px rgba(
+      0,
+      0,
+      0,
+      0.4
+    ), 0px 0px 0px 1px rgba(24, 24, 27, 1);
+  --elevation-commandbar:
+    0px 0px 0px 0.75px rgba(39, 39, 42, 1) inset, 0px 0px 0px 1.25px rgba(
+      255,
+      255,
+      255,
+      0.3
+    ) inset, 0px 8px 16px 0px rgba(0, 0, 0, 0.08), 0px 16px 32px 0px rgba(
+      0,
+      0,
+      0,
+      0.08
+    );
+  --borders-interactive-with-focus:
+    0px 1px 2px 0px rgba(30, 58, 138, 0.5), 0px 0px 0px 1px rgba(37, 99, 235, 1), 0px 0px 0px 2px rgba(
+      255,
+      255,
+      255,
+      1
+    ), 0px 0px 0px 4px rgba(37, 99, 235, 0.6);
+  --borders-interactive-with-shadow:
+    0px 1px 2px 0px rgba(30, 58, 138, 0.5), 0px 0px 0px 1px rgba(37, 99, 235, 1);
+  --borders-interactive-with-active:
+    0px 0px 0px 4px rgba(37, 99, 235, 0.2), 0px 0px 0px 1px rgba(37, 99, 235, 1);
 }
 
-&:where(.dark, .dark *) {
-  --color-border: oklch(1 0 0 / 8%);
-  --color-foreground: oklch(100% 0 0);
-  --color-background: oklch(21.34% 0 0);
+.dark {
+  --alpha-250: oklch(1 0 none / 0.1);
+  --alpha-400: oklch(1 0 none / 0.24);
+  --bg-base: oklch(0.249 0.0056 285.9851);
+  --bg-base-hover: oklch(0.2739 0.0055 286.0326);
+  --bg-base-pressed: oklch(0.3703 0.0119 285.8054);
+  --bg-component: oklch(0.2739 0.0055 286.0326);
+  --bg-component-hover: oklch(1 0 none / 0.1);
+  --bg-component-pressed: oklch(1 0 none / 0.16);
+  --bg-disabled: oklch(0.2739 0.0055 286.0326);
+  --bg-field: oklch(1 0 none / 0.04);
+  --bg-field-hover: oklch(1 0 none / 0.08);
+  --bg-field-component: oklch(0.249 0.0056 285.9851);
+  --bg-field-component-hover: oklch(0.2739 0.0055 286.0326);
+  --bg-highlight: oklch(0.2823 0.0874 267.9352);
+  --bg-highlight-hover: oklch(0.3791 0.1378 265.5222);
+  --bg-interactive: oklch(0.7137 0.1434 254.624);
+  --bg-overlay: oklch(0.2103 0.0059 285.8851 / 0.72);
+  --bg-subtle: oklch(0.2103 0.0059 285.8851);
+  --bg-subtle-hover: oklch(0.249 0.0056 285.9851);
+  --bg-subtle-pressed: oklch(0.2739 0.0055 286.0326);
+  --bg-switch-off: oklch(0.3703 0.0119 285.8054);
+  --bg-switch-off-hover: oklch(0.4419 0.0146 285.7864);
+  --border-base: oklch(1 0 none / 0.08);
+  --border-danger: oklch(0.5143 0.1978 16.935);
+  --border-error: oklch(0.7192 0.169 13.428);
+  --border-interactive: oklch(0.7137 0.1434 254.624);
+  --border-menu-bot: oklch(1 0 none / 0.08);
+  --border-menu-top: oklch(0.249 0.0056 285.9851);
+  --border-strong: oklch(1 0 none / 0.16);
+  --border-transparent: oklch(1 0 none / 0);
+  --button-danger: oklch(0.4546 0.1713 13.6968);
+  --button-danger-hover: oklch(0.5143 0.1978 16.935);
+  --button-danger-pressed: oklch(0.5858 0.222 17.5846);
+  --button-inverted: oklch(0.4419 0.0146 285.7864);
+  --button-inverted-hover: oklch(0.5517 0.0138 285.9384);
+  --button-inverted-pressed: oklch(0.7118 0.0129 286.0665);
+  --button-neutral: oklch(1 0 none / 0.04);
+  --button-neutral-hover: oklch(1 0 none / 0.08);
+  --button-neutral-pressed: oklch(1 0 none / 0.12);
+  --button-transparent: oklch(1 0 none / 0);
+  --button-transparent-hover: oklch(1 0 none / 0.08);
+  --button-transparent-pressed: oklch(1 0 none / 0.12);
+  --contrast-bg-base: oklch(0.2739 0.0055 286.0326);
+  --contrast-bg-base-hover: oklch(0.3703 0.0119 285.8054);
+  --contrast-bg-base-pressed: oklch(0.4419 0.0146 285.7864);
+  --contrast-bg-subtle: oklch(1 0 none / 0.04);
+  --contrast-border-base: oklch(1 0 none / 0.16);
+  --contrast-border-bot: oklch(1 0 none / 0.08);
+  --contrast-border-top: oklch(0.249 0.0056 285.9851);
+  --contrast-fg-primary: oklch(1 0 none / 0.88);
+  --contrast-fg-secondary: oklch(1 0 none / 0.56);
+  --fg-base: oklch(0.9674 0.0013 286.3748);
+  --fg-disabled: oklch(0.4419 0.0146 285.7864);
+  --fg-error: oklch(0.7192 0.169 13.428);
+  --fg-interactive: oklch(0.7137 0.1434 254.624);
+  --fg-interactive-hover: oklch(0.8091 0.0956 251.8128);
+  --fg-muted: oklch(0.5517 0.0138 285.9384);
+  --fg-on-color: oklch(1 0 none);
+  --fg-on-inverted: oklch(0.2103 0.0059 285.8851);
+  --fg-subtle: oklch(0.7118 0.0129 286.0665);
+  --tag-blue-bg: oklch(0.2823 0.0874 267.9352);
+  --tag-blue-bg-hover: oklch(0.3791 0.1378 265.5222);
+  --tag-blue-border: oklch(0.3791 0.1378 265.5222);
+  --tag-blue-icon: oklch(0.7137 0.1434 254.624);
+  --tag-blue-text: oklch(0.8091 0.0956 251.8128);
+  --tag-green-bg: oklch(0.2621 0.0487 172.5522);
+  --tag-green-bg-hover: oklch(0.378 0.073 168.9398);
+  --tag-green-border: oklch(0.378 0.073 168.9398);
+  --tag-green-icon: oklch(0.6959 0.1491 162.4796);
+  --tag-green-text: oklch(0.7729 0.1535 163.2231);
+  --tag-neutral-bg: oklch(1 0 none / 0.08);
+  --tag-neutral-bg-hover: oklch(1 0 none / 0.12);
+  --tag-neutral-border: oklch(1 0 none / 0.06);
+  --tag-neutral-icon: oklch(0.5517 0.0138 285.9384);
+  --tag-neutral-text: oklch(0.8711 0.0055 286.2859);
+  --tag-orange-bg: oklch(0.2659 0.0762 36.2585);
+  --tag-orange-bg-hover: oklch(0.4084 0.1165 38.1715);
+  --tag-orange-border: oklch(0.4084 0.1165 38.1715);
+  --tag-orange-icon: oklch(0.7576 0.159 55.9344);
+  --tag-orange-text: oklch(0.8366 0.1165 66.2895);
+  --tag-purple-bg: oklch(0.2827 0.1351 291.0894);
+  --tag-purple-bg-hover: oklch(0.432 0.2106 292.7591);
+  --tag-purple-border: oklch(0.432 0.2106 292.7591);
+  --tag-purple-icon: oklch(0.709 0.1592 293.5412);
+  --tag-purple-text: oklch(0.8112 0.1013 293.5712);
+  --tag-red-bg: oklch(0.2708 0.1009 12.094);
+  --tag-red-bg-hover: oklch(0.4103 0.1502 10.2718);
+  --tag-red-border: oklch(0.4103 0.1502 10.2718);
+  --tag-red-icon: oklch(0.7192 0.169 13.428);
+  --tag-red-text: oklch(0.8097 0.1061 11.6384);
+  --details-contrast-on-bg-interactive: 0px 1px 2px 0px rgba(30, 58, 138, 0.6);
+  --details-switch-handle:
+    0px 0px 2px 1px rgba(255, 255, 255, 1) inset, 0px 1px 0px 0px rgba(
+      255,
+      255,
+      255,
+      1
+    ) inset, 0px 0px 0px 0.5px rgba(0, 0, 0, 0.16), 0px 5px 4px 0px rgba(
+      0,
+      0,
+      0,
+      0.1
+    ), 0px 3px 3px 0px rgba(0, 0, 0, 0.1), 0px 1px 2px 0px rgba(0, 0, 0, 0.1), 0px 0px 1px 0px rgba(
+      0,
+      0,
+      0,
+      0.1
+    );
+  --borders-interactive-with-active:
+    0px 0px 0px 1px rgba(96, 165, 250, 1), 0px 0px 0px 4px
+    rgba(59, 130, 246, 0.25);
+  --borders-focus:
+    0px 0px 0px 1px rgba(24, 24, 27, 1), 0px 0px 0px 3px rgba(96, 165, 250, 0.8);
+  --details-switch-background-focus:
+    0px 0px 0px 1px rgba(24, 24, 27, 1), 0px 0px 0px 3px rgba(96, 165, 250, 0.8), 0px 1px 1px 0px rgba(
+      0,
+      0,
+      0,
+      0.1
+    ) inset, 0px 2px 4px 0px rgba(0, 0, 0, 0.1) inset, 0px 0px 0px 0.75px rgba(
+      255,
+      255,
+      255,
+      0.12
+    ) inset, 0px 0px 8px 0px rgba(0, 0, 0, 0.1) inset;
+  --buttons-danger:
+    0px -1px 0px 0px rgba(255, 255, 255, 0.16), 0px 0px 0px 1px rgba(
+      255,
+      255,
+      255,
+      0.12
+    ), 0px 0px 0px 1px rgba(159, 18, 57, 1), 0px 0px 1px 1.5px rgba(
+      0,
+      0,
+      0,
+      0.24
+    ), 0px 2px 2px 0px rgba(0, 0, 0, 0.24);
+  --buttons-danger-focus:
+    0px -1px 0px 0px rgba(255, 255, 255, 0.16), 0px 0px 0px 1px rgba(
+      255,
+      255,
+      255,
+      0.12
+    ), 0px 0px 0px 1px rgba(159, 18, 57, 1), 0px 0px 0px 2px rgba(24, 24, 27, 1), 0px 0px 0px 4px rgba(
+      96,
+      165,
+      250,
+      0.8
+    );
+  --details-switch-background:
+    0px 1px 1px 0px rgba(0, 0, 0, 0.1) inset, 0px 2px 4px 0px rgba(0, 0, 0, 0.1) inset, 0px 0px 0px 0.75px rgba(
+      255,
+      255,
+      255,
+      0.12
+    ) inset, 0px 0px 8px 0px rgba(0, 0, 0, 0.1) inset;
+  --buttons-inverted-focus:
+    0px -1px 0px 0px rgba(255, 255, 255, 0.12), 0px 0px 0px 1px rgba(
+      255,
+      255,
+      255,
+      0.12
+    ), 0px 0px 0px 1px rgba(82, 82, 91, 1), 0px 0px 0px 2px rgba(24, 24, 27, 1), 0px 0px 0px 4px rgba(
+      96,
+      165,
+      250,
+      0.8
+    );
+  --elevation-flyout:
+    0px -1px 0px 0px rgba(255, 255, 255, 0.04), 0px 0px 0px 1px rgba(
+      255,
+      255,
+      255,
+      0.1
+    ), 0px 4px 8px 0px rgba(0, 0, 0, 0.32), 0px 8px 16px 0px rgba(0, 0, 0, 0.32);
+  --borders-error:
+    0px 0px 0px 1px rgba(244, 63, 94, 1), 0px 0px 0px 3px
+    rgba(225, 29, 72, 0.25);
+  --buttons-inverted:
+    0px -1px 0px 0px rgba(255, 255, 255, 0.12), 0px 0px 0px 1px rgba(
+      255,
+      255,
+      255,
+      0.1
+    ), 0px 0px 0px 1px rgba(82, 82, 91, 1), 0px 0px 1px 1.5px rgba(
+      0,
+      0,
+      0,
+      0.24
+    ), 0px 2px 2px 0px rgba(0, 0, 0, 0.24);
+  --borders-base:
+    0px -1px 0px 0px rgba(255, 255, 255, 0.06), 0px 0px 0px 1px rgba(
+      255,
+      255,
+      255,
+      0.06
+    ), 0px 0px 0px 1px rgba(39, 39, 42, 1), 0px 0px 1px 1.5px rgba(
+      0,
+      0,
+      0,
+      0.24
+    ), 0px 2px 2px 0px rgba(0, 0, 0, 0.24);
+  --elevation-card-hover:
+    0px -1px 0px 0px rgba(255, 255, 255, 0.06), 0px 0px 0px 1px rgba(
+      255,
+      255,
+      255,
+      0.06
+    ), 0px 0px 0px 1px rgba(39, 39, 42, 1), 0px 1px 4px 0px rgba(0, 0, 0, 0.48), 0px 2px 8px 0px rgba(
+      0,
+      0,
+      0,
+      0.48
+    );
+  --elevation-card-rest:
+    0px -1px 0px 0px rgba(255, 255, 255, 0.06), 0px 0px 0px 1px rgba(
+      255,
+      255,
+      255,
+      0.06
+    ), 0px 0px 0px 1px rgba(39, 39, 42, 1), 0px 1px 2px 0px rgba(0, 0, 0, 0.32), 0px 2px 4px 0px rgba(
+      0,
+      0,
+      0,
+      0.32
+    );
+  --buttons-neutral:
+    0px -1px 0px 0px rgba(255, 255, 255, 0.06), 0px 0px 0px 1px rgba(
+      255,
+      255,
+      255,
+      0.06
+    ), 0px 0px 0px 1px rgba(39, 39, 42, 1), 0px 0px 1px 1.5px rgba(
+      0,
+      0,
+      0,
+      0.24
+    ), 0px 2px 2px 0px rgba(0, 0, 0, 0.24);
+  --elevation-code-block:
+    0px -1px 0px 0px rgba(255, 255, 255, 0.06), 0px 0px 0px 1px rgba(
+      255,
+      255,
+      255,
+      0.06
+    ), 0px 0px 0px 1px rgba(39, 39, 42, 1), 0px 1px 2px 0px rgba(0, 0, 0, 0.32), 0px 2px 4px 0px rgba(
+      0,
+      0,
+      0,
+      0.32
+    );
+  --buttons-neutral-focus:
+    0px -1px 0px 0px rgba(255, 255, 255, 0.06), 0px 0px 0px 1px rgba(
+      255,
+      255,
+      255,
+      0.06
+    ), 0px 0px 0px 1px rgba(39, 39, 42, 1), 0px 0px 0px 2px rgba(24, 24, 27, 1), 0px 0px 0px 4px rgba(
+      96,
+      165,
+      250,
+      0.8
+    );
+  --elevation-modal:
+    0px 0px 0px 1px rgba(24, 24, 27, 1) inset, 0px 0px 0px 1.5px rgba(
+      255,
+      255,
+      255,
+      0.06
+    ) inset, 0px -1px 0px 0px rgba(255, 255, 255, 0.04), 0px 0px 0px 1px rgba(
+      255,
+      255,
+      255,
+      0.1
+    ), 0px 4px 8px 0px rgba(0, 0, 0, 0.32), 0px 8px 16px 0px rgba(0, 0, 0, 0.32);
+  --elevation-commandbar:
+    0px 0px 0px 0.75px rgba(24, 24, 27, 1) inset, 0px 0px 0px 1.25px rgba(
+      255,
+      255,
+      255,
+      0.1
+    ) inset, 0px 4px 8px 0px rgba(0, 0, 0, 0.32), 0px 8px 16px 0px rgba(
+      0,
+      0,
+      0,
+      0.32
+    );
+  --elevation-tooltip:
+    0px -1px 0px 0px rgba(255, 255, 255, 0.04), 0px 2px 4px 0px rgba(
+      0,
+      0,
+      0,
+      0.32
+    ), 0px 0px 0px 1px rgba(255, 255, 255, 0.1), 0px 4px 8px 0px rgba(
+      0,
+      0,
+      0,
+      0.32
+    );
+  --borders-interactive-with-focus:
+    0px -1px 2px 0px rgba(219, 234, 254, 0.5), 0px 0px 0px 1px rgba(
+      96,
+      165,
+      250,
+      1
+    ), 0px 0px 0px 2px rgba(24, 24, 27, 1), 0px 0px 0px 4px rgba(
+      96,
+      165,
+      250,
+      0.8
+    );
+  --borders-interactive-with-shadow:
+    0px -1px 2px 0px rgba(219, 234, 254, 0.5), 0px 0px 0px 1px
+    rgba(96, 165, 250, 1);
 }
 
 @theme inline {
@@ -35,6 +600,121 @@
   --color-border: var(--color-border);
   --color-foreground: var(--color-foreground);
   --color-background: var(--color-background);
+  --borders-interactive-with-active: var(----borders-interactive-with-active);
+  --borders-interactive-with-shadow: var(----borders-interactive-with-shadow);
+  --borders-interactive-with-focus: var(----borders-interactive-with-focus);
+  --elevation-commandbar: var(----elevation-commandbar);
+  --buttons-inverted: var(----buttons-inverted);
+  --elevation-code-block: var(----elevation-code-block);
+  --elevation-modal: var(----elevation-modal);
+  --elevation-tooltip: var(----elevation-tooltip);
+  --elevation-flyout: var(----elevation-flyout);
+  --details-switch-background: var(----details-switch-background);
+  --details-switch-background-focus: var(----details-switch-background-focus);
+  --buttons-neutral-focus: var(----buttons-neutral-focus);
+  --elevation-card-rest: var(----elevation-card-rest);
+  --borders-base: var(----borders-base);
+  --buttons-neutral: var(----buttons-neutral);
+  --details-switch-handle: var(----details-switch-handle);
+  --elevation-card-hover: var(----elevation-card-hover);
+  --buttons-inverted-focus: var(----buttons-inverted-focus);
+  --buttons-danger: var(----buttons-danger);
+  --borders-focus: var(----borders-focus);
+  --borders-error: var(----borders-error);
+  --details-contrast-on-bg-interactive: var(
+    ----details-contrast-on-bg-interactive
+  );
+  --buttons-danger-focus: var(----buttons-danger-focus);
+  --color-tag-red-text: var(--tag-red-text);
+  --color-tag-red-icon: var(--tag-red-icon);
+  --color-tag-red-border: var(--tag-red-border);
+  --color-tag-red-bg-hover: var(--tag-red-bg-hover);
+  --color-tag-red-bg: var(--tag-red-bg);
+  --color-tag-purple-text: var(--tag-purple-text);
+  --color-tag-purple-icon: var(--tag-purple-icon);
+  --color-tag-purple-border: var(--tag-purple-border);
+  --color-tag-purple-bg-hover: var(--tag-purple-bg-hover);
+  --color-tag-purple-bg: var(--tag-purple-bg);
+  --color-tag-orange-text: var(--tag-orange-text);
+  --color-tag-orange-icon: var(--tag-orange-icon);
+  --color-tag-orange-border: var(--tag-orange-border);
+  --color-tag-orange-bg-hover: var(--tag-orange-bg-hover);
+  --color-tag-orange-bg: var(--tag-orange-bg);
+  --color-tag-neutral-text: var(--tag-neutral-text);
+  --color-tag-neutral-icon: var(--tag-neutral-icon);
+  --color-tag-neutral-border: var(--tag-neutral-border);
+  --color-tag-neutral-bg-hover: var(--tag-neutral-bg-hover);
+  --color-tag-neutral-bg: var(--tag-neutral-bg);
+  --color-tag-green-text: var(--tag-green-text);
+  --color-tag-green-icon: var(--tag-green-icon);
+  --color-tag-green-border: var(--tag-green-border);
+  --color-tag-green-bg-hover: var(--tag-green-bg-hover);
+  --color-tag-green-bg: var(--tag-green-bg);
+  --color-tag-blue-text: var(--tag-blue-text);
+  --color-tag-blue-icon: var(--tag-blue-icon);
+  --color-tag-blue-border: var(--tag-blue-border);
+  --color-tag-blue-bg-hover: var(--tag-blue-bg-hover);
+  --color-tag-blue-bg: var(--tag-blue-bg);
+  --color-fg-subtle: var(--fg-subtle);
+  --color-fg-on-inverted: var(--fg-on-inverted);
+  --color-fg-on-color: var(--fg-on-color);
+  --color-fg-muted: var(--fg-muted);
+  --color-fg-interactive-hover: var(--fg-interactive-hover);
+  --color-fg-interactive: var(--fg-interactive);
+  --color-fg-error: var(--fg-error);
+  --color-fg-disabled: var(--fg-disabled);
+  --color-fg-base: var(--fg-base);
+  --color-contrast-fg-secondary: var(--contrast-fg-secondary);
+  --color-contrast-fg-primary: var(--contrast-fg-primary);
+  --color-contrast-border-top: var(--contrast-border-top);
+  --color-contrast-border-bot: var(--contrast-border-bot);
+  --color-contrast-border-base: var(--contrast-border-base);
+  --color-contrast-bg-subtle: var(--contrast-bg-subtle);
+  --color-contrast-bg-base-pressed: var(--contrast-bg-base-pressed);
+  --color-contrast-bg-base-hover: var(--contrast-bg-base-hover);
+  --color-contrast-bg-base: var(--contrast-bg-base);
+  --color-button-transparent-pressed: var(--button-transparent-pressed);
+  --color-button-transparent-hover: var(--button-transparent-hover);
+  --color-button-transparent: var(--button-transparent);
+  --color-button-neutral-pressed: var(--button-neutral-pressed);
+  --color-button-neutral-hover: var(--button-neutral-hover);
+  --color-button-neutral: var(--button-neutral);
+  --color-button-inverted-pressed: var(--button-inverted-pressed);
+  --color-button-inverted-hover: var(--button-inverted-hover);
+  --color-button-inverted: var(--button-inverted);
+  --color-button-danger-pressed: var(--button-danger-pressed);
+  --color-button-danger-hover: var(--button-danger-hover);
+  --color-button-danger: var(--button-danger);
+  --color-border-transparent: var(--border-transparent);
+  --color-border-strong: var(--border-strong);
+  --color-border-menu-top: var(--border-menu-top);
+  --color-border-menu-bot: var(--border-menu-bot);
+  --color-border-interactive: var(--border-interactive);
+  --color-border-error: var(--border-error);
+  --color-border-danger: var(--border-danger);
+  --color-border-base: var(--border-base);
+  --color-bg-switch-off-hover: var(--bg-switch-off-hover);
+  --color-bg-switch-off: var(--bg-switch-off);
+  --color-bg-subtle-pressed: var(--bg-subtle-pressed);
+  --color-bg-subtle-hover: var(--bg-subtle-hover);
+  --color-bg-subtle: var(--bg-subtle);
+  --color-bg-overlay: var(--bg-overlay);
+  --color-bg-interactive: var(--bg-interactive);
+  --color-bg-highlight-hover: var(--bg-highlight-hover);
+  --color-bg-highlight: var(--bg-highlight);
+  --color-bg-field-component-hover: var(--bg-field-component-hover);
+  --color-bg-field-component: var(--bg-field-component);
+  --color-bg-field-hover: var(--bg-field-hover);
+  --color-bg-field: var(--bg-field);
+  --color-bg-disabled: var(--bg-disabled);
+  --color-bg-component-pressed: var(--bg-component-pressed);
+  --color-bg-component-hover: var(--bg-component-hover);
+  --color-bg-component: var(--bg-component);
+  --color-bg-base-pressed: var(--bg-base-pressed);
+  --color-bg-base-hover: var(--bg-base-hover);
+  --color-bg-base: var(--bg-base);
+  --color-alpha-400: var(--alpha-400);
+  --color-alpha-250: var(--alpha-250);
 }
 
 @layer base {
@@ -49,9 +729,9 @@
     min-height: 100%;
     scroll-behavior: smooth;
     font-synthesis: none;
-    color: var(--color-foreground);
-    border-color: var(--color-border);
-    background-color: var(--color-background);
+    color: var(--color-fg-base);
+    border-color: var(--color-border-base);
+    background-color: var(--color-bg-subtle);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
