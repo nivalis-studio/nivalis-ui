@@ -54,7 +54,7 @@
 		"sonner": "catalog:",
 		"tailwind-merge": "catalog:",
 		"turbo": "catalog:",
-		"vaul": "^1.1.2",
+		"vaul": "catalog:",
 		"workflow": "catalog:",
 		"zod": "catalog:"
 	},
